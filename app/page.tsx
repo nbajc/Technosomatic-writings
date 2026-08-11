@@ -38,13 +38,13 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0B] text-[#FAFAFA] antialiased">
+    <div className="min-h-screen bg-white text-[#09090B] antialiased">
       
       {/* Floating Navigation Header */}
       <Header onSelectSection={handleSelectSection} />
 
       {/* Main Centered Fluid Responsive Container */}
-      <main className="max-w-7xl mx-auto px-6 md:px-12">
+      <main className="max-w-7xl mx-auto px-6 md:px-12 bg-white">
         {selectedEssay ? (
           <ReaderView
             essay={selectedEssay}

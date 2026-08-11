@@ -8,14 +8,9 @@ import {
   ArrowRight,
   Volume2,
   VolumeX,
-  Type,
-  Maximize2,
-  Minimize2,
   ExternalLink,
   Share2,
   Check,
-  Sparkles,
-  BookOpen
 } from 'lucide-react';
 import katex from 'katex';
 
@@ -31,13 +26,10 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
   onSelectEssay,
 }) => {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [focusMode, setFocusMode] = useState(false);
   const [fontFamily, setFontFamily] = useState<'serif' | 'sans' | 'mono'>('serif');
-  const [fontSize, setFontSize] = useState<'sm' | 'base' | 'lg' | 'xl'>('base');
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [copiedQuote, setCopiedQuote] = useState(false);
 
-  // Track scroll progress
   useEffect(() => {
     const handleScroll = () => {
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -60,7 +52,6 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
     setTimeout(() => setCopiedQuote(false), 2000);
   };
 
-  // Find previous / next essay in series
   const currentIndex = ESSAY_SERIES.findIndex((e) => e.id === essay.id);
   const prevEssay = currentIndex > 0 ? ESSAY_SERIES[currentIndex - 1] : null;
   const nextEssay = currentIndex < ESSAY_SERIES.length - 1 ? ESSAY_SERIES[currentIndex + 1] : null;
@@ -70,43 +61,30 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
       case 'sans':
         return 'font-sans';
       case 'mono':
-        return 'font-mono-code';
+        return 'font-mono-tag';
       default:
-        return 'font-cinzel';
-    }
-  };
-
-  const getSizeClass = () => {
-    switch (fontSize) {
-      case 'sm':
-        return 'text-sm leading-relaxed';
-      case 'lg':
-        return 'text-lg leading-loose';
-      case 'xl':
-        return 'text-xl leading-loose';
-      default:
-        return 'text-base leading-relaxed';
+        return 'font-serif-header';
     }
   };
 
   return (
-    <div className={`relative w-full min-h-screen ${focusMode ? 'bg-[#060608]' : ''} transition-colors duration-500`}>
+    <div className="relative w-full min-h-screen bg-white text-[#09090B] transition-colors duration-300">
       
       {/* Top Reading Progress Bar */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-zinc-900 z-50">
+      <div className="fixed top-0 left-0 w-full h-1 bg-zinc-200 z-50">
         <div
-          className="h-full bg-gradient-to-r from-cyan-400 via-amber-400 to-cyan-300 transition-all duration-150"
+          className="h-full bg-black transition-all duration-150"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
 
       {/* Reader Control Toolbar */}
       <div className="sticky top-4 z-40 max-w-4xl mx-auto px-4 mb-8">
-        <div className="glass-panel p-2.5 rounded-full flex items-center justify-between shadow-2xl border border-zinc-800">
+        <div className="bg-white/90 backdrop-blur-md p-2.5 rounded-full flex items-center justify-between shadow-md border border-zinc-200">
           
           <button
             onClick={onBack}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-xs font-mono-code text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 transition-colors"
+            className="flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono-tag text-zinc-700 hover:text-black hover:bg-zinc-100 transition-colors font-semibold"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>ESSAY CATALOG</span>
@@ -115,57 +93,45 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
           {/* Typography & Audio Customizer */}
           <div className="flex items-center space-x-2">
             
-            {/* Font Family Controls */}
-            <div className="hidden sm:flex items-center bg-zinc-950 p-1 rounded-full border border-zinc-800 text-xs font-mono-code">
+            <div className="hidden sm:flex items-center bg-zinc-100 p-1 rounded-full border border-zinc-200 text-xs font-mono-tag">
               <button
                 onClick={() => setFontFamily('serif')}
-                className={`px-2.5 py-1 rounded-full ${fontFamily === 'serif' ? 'bg-cyan-400 text-zinc-950 font-semibold' : 'text-zinc-400'}`}
+                className={`px-2.5 py-1 rounded-full ${fontFamily === 'serif' ? 'bg-black text-white font-semibold' : 'text-zinc-700'}`}
               >
                 Serif
               </button>
               <button
                 onClick={() => setFontFamily('sans')}
-                className={`px-2.5 py-1 rounded-full ${fontFamily === 'sans' ? 'bg-cyan-400 text-zinc-950 font-semibold' : 'text-zinc-400'}`}
+                className={`px-2.5 py-1 rounded-full ${fontFamily === 'sans' ? 'bg-black text-white font-semibold' : 'text-zinc-700'}`}
               >
                 Sans
               </button>
               <button
                 onClick={() => setFontFamily('mono')}
-                className={`px-2.5 py-1 rounded-full ${fontFamily === 'mono' ? 'bg-cyan-400 text-zinc-950 font-semibold' : 'text-zinc-400'}`}
+                className={`px-2.5 py-1 rounded-full ${fontFamily === 'mono' ? 'bg-black text-white font-semibold' : 'text-zinc-700'}`}
               >
                 Mono
               </button>
             </div>
 
-            {/* Ambient Soundscape Synth Toggle */}
             <button
               onClick={toggleAudio}
               className={`p-2 rounded-full border transition-all ${
                 isPlayingAudio
-                  ? 'bg-amber-400/20 border-amber-400 text-amber-400 animate-pulse'
-                  : 'border-zinc-800 text-zinc-400 hover:text-zinc-200'
+                  ? 'bg-zinc-200 border-black text-black'
+                  : 'border-zinc-200 text-zinc-600 hover:text-black'
               }`}
               title="Toggle Web Audio Ambient Reading Synth"
             >
               {isPlayingAudio ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
             </button>
 
-            {/* Focus Mode Toggle */}
-            <button
-              onClick={() => setFocusMode(!focusMode)}
-              className="p-2 rounded-full border border-zinc-800 text-zinc-400 hover:text-zinc-200 transition-colors"
-              title="Toggle Distraction-Free Focus Mode"
-            >
-              {focusMode ? <Minimize2 className="w-4 h-4 text-cyan-400" /> : <Maximize2 className="w-4 h-4" />}
-            </button>
-
-            {/* Share / Copy */}
             <button
               onClick={handleCopyShare}
-              className="p-2 rounded-full border border-zinc-800 text-zinc-400 hover:text-cyan-400 transition-colors"
+              className="p-2 rounded-full border border-zinc-200 text-zinc-600 hover:text-black transition-colors"
               title="Copy Essay Link"
             >
-              {copiedQuote ? <Check className="w-4 h-4 text-emerald-400" /> : <Share2 className="w-4 h-4" />}
+              {copiedQuote ? <Check className="w-4 h-4 text-emerald-600" /> : <Share2 className="w-4 h-4" />}
             </button>
 
           </div>
@@ -173,41 +139,39 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
         </div>
       </div>
 
-      {/* Main Long-Form Article Content */}
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 py-8 space-y-12">
+      {/* Main Article Content */}
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 py-8 space-y-12 bg-white">
         
-        {/* Essay Header Info */}
-        <header className="space-y-6 border-b border-zinc-800 pb-10">
+        {/* Header */}
+        <header className="space-y-6 border-b border-zinc-200 pb-10">
           
-          <div className="flex items-center space-x-3 text-xs font-mono-code">
-            <span className="px-2.5 py-1 rounded bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 font-semibold">
+          <div className="flex items-center space-x-3 text-xs font-mono-tag">
+            <span className="px-2.5 py-1 rounded bg-zinc-100 text-black border border-zinc-300 font-bold">
               {essay.part}
             </span>
-            <span className="text-zinc-500">•</span>
-            <span className="text-zinc-400">{essay.readTime}</span>
-            <span className="text-zinc-500">•</span>
-            <span className="text-zinc-400">{essay.date}</span>
+            <span className="text-zinc-400">•</span>
+            <span className="text-zinc-600">{essay.readTime}</span>
+            <span className="text-zinc-400">•</span>
+            <span className="text-zinc-600">{essay.date}</span>
           </div>
 
-          <h1 className={`text-3xl sm:text-5xl ${getFontClass()} font-bold text-zinc-100 leading-tight tracking-tight`}>
+          <h1 className={`text-4xl sm:text-5xl ${getFontClass()} font-bold text-[#09090B] leading-tight tracking-tight`}>
             {essay.title}
           </h1>
 
-          <p className="text-lg font-sans text-zinc-300 font-light leading-relaxed">
+          <p className="text-lg font-sans text-zinc-600 font-light leading-relaxed">
             {essay.subtitle}
           </p>
 
-          {/* Canonical Substack Syndication Badge */}
-          <div className="p-4 rounded-xl bg-zinc-950/80 border border-amber-500/30 flex items-center justify-between text-xs font-mono-code">
-            <div className="flex items-center space-x-2 text-amber-400">
-              <Sparkles className="w-4 h-4" />
+          <div className="p-4 rounded-md bg-zinc-50 border border-zinc-200 flex items-center justify-between text-xs font-mono-tag">
+            <div className="flex items-center space-x-2 text-black font-bold">
               <span>SYNDICATED / CANONICAL ON SUBSTACK</span>
             </div>
             <a
               href={essay.substackUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-1 text-zinc-300 hover:text-amber-400 transition-colors"
+              className="flex items-center space-x-1 text-zinc-700 hover:text-black transition-colors font-semibold"
             >
               <span>ORIGINAL POST</span>
               <ExternalLink className="w-3 h-3" />
@@ -216,12 +180,12 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
 
         </header>
 
-        {/* Essay Sections */}
-        <div className={`space-y-10 ${getSizeClass()} text-zinc-300 font-light`}>
+        {/* Content */}
+        <div className="space-y-10 text-base leading-relaxed text-zinc-800 font-light">
           {essay.content.map((sec, idx) => (
             <section key={idx} className="space-y-4">
               
-              <h2 className="text-xl font-cinzel font-bold text-zinc-100 border-l-2 border-cyan-400 pl-4 py-0.5">
+              <h2 className="text-2xl font-serif-header font-bold text-[#09090B] border-l-2 border-black pl-4 py-0.5">
                 {sec.sectionTitle}
               </h2>
 
@@ -229,16 +193,14 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
                 {sec.text}
               </p>
 
-              {/* Highlight Quote Callout */}
               {sec.quote && (
-                <blockquote className="my-6 p-6 rounded-r-xl bg-zinc-950 border-l-4 border-amber-400 italic font-serif text-lg text-zinc-200">
+                <blockquote className="my-6 p-6 rounded-r-md bg-zinc-50 border-l-4 border-black italic font-serif text-lg text-zinc-900">
                   "{sec.quote}"
                 </blockquote>
               )}
 
-              {/* KaTeX Math Formula Rendering */}
               {sec.latexFormula && (
-                <div className="my-6 p-4 rounded-lg bg-zinc-950/90 border border-zinc-800 text-center font-mono-code text-cyan-300 overflow-x-auto">
+                <div className="my-6 p-4 rounded-md bg-zinc-50 border border-zinc-200 text-center font-mono-tag text-black overflow-x-auto">
                   <div
                     dangerouslySetInnerHTML={{
                       __html: katex.renderToString(sec.latexFormula, {
@@ -254,16 +216,16 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
           ))}
         </div>
 
-        {/* Somatic Node Tag Footer */}
-        <div className="pt-8 border-t border-zinc-800 space-y-3">
-          <span className="text-xs font-mono-code text-zinc-500 uppercase tracking-widest block">
+        {/* Somatic Nodes */}
+        <div className="pt-8 border-t border-zinc-200 space-y-3">
+          <span className="text-xs font-mono-tag text-zinc-500 uppercase tracking-widest block font-semibold">
             CONNECTED SOMATIC HOMUNCULUS NODES:
           </span>
           <div className="flex flex-wrap gap-2">
             {essay.somaticNodes.map((node) => (
               <span
                 key={node}
-                className="px-3 py-1 rounded bg-zinc-900 border border-zinc-800 text-xs font-mono-code text-cyan-400"
+                className="px-3 py-1 rounded bg-zinc-100 border border-zinc-200 text-xs font-mono-tag text-black font-semibold"
               >
                 ⊙ {node}
               </span>
@@ -271,15 +233,15 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
           </div>
         </div>
 
-        {/* Previous & Next Essay Pagination */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-10 border-t border-zinc-800">
+        {/* Previous & Next Pagination */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-10 border-t border-zinc-200">
           {prevEssay ? (
             <button
               onClick={() => onSelectEssay(prevEssay)}
-              className="p-4 rounded-xl glass-panel border border-zinc-800 hover:border-cyan-400 text-left transition-all group space-y-1"
+              className="p-4 rounded-md border border-zinc-200 hover:border-black text-left transition-all group space-y-1 bg-white"
             >
-              <span className="text-[10px] font-mono-code text-zinc-500 uppercase">PREVIOUS IN SERIES</span>
-              <div className="text-sm font-cinzel font-bold text-zinc-200 group-hover:text-cyan-400 flex items-center space-x-2">
+              <span className="text-[10px] font-mono-tag text-zinc-500 uppercase font-semibold">PREVIOUS IN SERIES</span>
+              <div className="text-base font-serif-header font-bold text-zinc-900 group-hover:text-black flex items-center space-x-2">
                 <ArrowLeft className="w-4 h-4 shrink-0" />
                 <span className="line-clamp-1">{prevEssay.title}</span>
               </div>
@@ -289,10 +251,10 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
           {nextEssay && (
             <button
               onClick={() => onSelectEssay(nextEssay)}
-              className="p-4 rounded-xl glass-panel border border-zinc-800 hover:border-cyan-400 text-right transition-all group space-y-1"
+              className="p-4 rounded-md border border-zinc-200 hover:border-black text-right transition-all group space-y-1 bg-white"
             >
-              <span className="text-[10px] font-mono-code text-zinc-500 uppercase">NEXT IN SERIES</span>
-              <div className="text-sm font-cinzel font-bold text-zinc-200 group-hover:text-cyan-400 flex items-center justify-end space-x-2">
+              <span className="text-[10px] font-mono-tag text-zinc-500 uppercase font-semibold">NEXT IN SERIES</span>
+              <div className="text-base font-serif-header font-bold text-zinc-900 group-hover:text-black flex items-center justify-end space-x-2">
                 <span className="line-clamp-1">{nextEssay.title}</span>
                 <ArrowRight className="w-4 h-4 shrink-0" />
               </div>

@@ -5,15 +5,14 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        background: '#0A0A0B',
-        card: '#121215',
-        border: '#27272A',
-        primary: '#FAFAFA',
-        muted: '#A1A1AA',
+        background: '#FFFFFF',
+        card: '#FAFAFA',
+        border: '#E4E4E7',
+        primary: '#09090B',
+        muted: '#52525B',
       },
       fontFamily: {
         serif: ['"Instrument Serif"', 'Cinzel', 'Georgia', 'serif'],

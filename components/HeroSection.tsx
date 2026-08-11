@@ -11,38 +11,36 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
   const [activeNode, setActiveNode] = useState<string | null>(null);
 
   return (
-    <section id="hero" className="w-full min-h-[85vh] py-12 flex flex-col justify-center border-b border-zinc-800/60">
+    <section id="hero" className="w-full min-h-[85vh] py-12 flex flex-col justify-center border-b border-zinc-200 bg-white">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        {/* LEFT COLUMN (Cols 1-7): Editorial Text Hierarchy */}
+        {/* LEFT COLUMN (Cols 1-7): Clean Editorial Hierarchy */}
         <div className="lg:col-span-7 space-y-6">
           
           {/* Small Mono Tagline */}
-          <div className="text-xs font-mono-tag tracking-widest text-sky-400 font-semibold uppercase">
+          <div className="text-xs font-mono-tag tracking-widest text-[#18181B] font-bold uppercase">
             NATASHA BAJC // A²I TECHNOSOMATIC ARCHITECTURE
           </div>
 
           {/* H1 Headline */}
-          <h1 className="text-4xl md:text-6xl font-serif-header font-light leading-tight text-[#FAFAFA] tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-serif-header font-bold text-[#09090B] leading-tight tracking-tight">
             Architectural AI Has a <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-zinc-100 to-amber-400">
-              Missing Root Node.
-            </span>
+            Missing Root Node.
           </h1>
 
           {/* Sub-headline */}
-          <p className="text-lg text-zinc-400 font-sans font-light leading-normal">
+          <p className="text-lg text-zinc-600 font-sans font-light leading-normal">
             Re-inserting the embodied human nervous system into computational spatial intelligence.
           </p>
 
-          {/* Manifesto Body Paragraph */}
-          <div className="p-6 rounded-lg bg-zinc-900/60 border border-zinc-800 text-sm leading-relaxed text-zinc-300 space-y-3">
+          {/* Manifesto Body Paragraphs */}
+          <div className="p-6 rounded-lg bg-zinc-50 border border-zinc-200 text-sm leading-relaxed text-zinc-800 space-y-3 shadow-xs">
             <p>
               Generative neural networks promise rhizomatic fluidity, but their execution remains strictly{' '}
               <button
                 onMouseEnter={() => setActiveNode('Arborescent')}
                 onMouseLeave={() => setActiveNode(null)}
-                className="text-sky-400 border-b border-dashed border-sky-400 font-mono-tag text-xs px-1 hover:bg-sky-400/10 transition-colors"
+                className="text-black font-semibold border-b border-dashed border-black font-mono-tag text-xs px-1 hover:bg-zinc-200 transition-colors"
               >
                 [arborescent—hierarchical trees]
               </button>{' '}
@@ -51,45 +49,45 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
             <p>
               When that origin is built on flattened images rather than human neurobiology, the entire computational tree produces spatial hallucination.
             </p>
-            <p className="text-[#FAFAFA] border-l-2 border-sky-400 pl-3 py-1 bg-sky-400/5 rounded-r">
+            <p className="text-[#09090B] font-medium border-l-2 border-black pl-3 py-1 bg-zinc-100 rounded-r">
               A²I acknowledges the antifragile power of network architectures, but enforces a fundamental correction: re-inserting the biological human nervous system as the non-negotiable{' '}
               <button
                 onMouseEnter={() => setActiveNode('RootNode')}
                 onMouseLeave={() => setActiveNode(null)}
-                className="text-amber-400 border-b border-dashed border-amber-400 font-mono-tag text-xs px-1 hover:bg-amber-400/10 transition-colors"
+                className="text-black font-bold border-b border-dashed border-black font-mono-tag text-xs px-1 hover:bg-zinc-200 transition-colors"
               >
                 [root node of spatial intelligence]
               </button>.
             </p>
           </div>
 
-          {/* Interactive Node Bar: Styled flex wrap of crisp buttons */}
+          {/* Interactive Node Bar: White background with 1px black border */}
           <div className="flex flex-wrap gap-2 pt-1">
             <button
               onMouseEnter={() => setActiveNode('RootNode')}
               onMouseLeave={() => setActiveNode(null)}
-              className="bg-zinc-900 border border-zinc-800 hover:border-sky-400 text-xs font-mono-tag text-zinc-300 hover:text-sky-400 py-2 px-3 rounded transition-colors"
+              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-xs transition-colors"
             >
               ⊙ Somatic Root
             </button>
             <button
               onMouseEnter={() => setActiveNode('Arborescent')}
               onMouseLeave={() => setActiveNode(null)}
-              className="bg-zinc-900 border border-zinc-800 hover:border-amber-400 text-xs font-mono-tag text-zinc-300 hover:text-amber-400 py-2 px-3 rounded transition-colors"
+              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-xs transition-colors"
             >
               ⊙ Arborescent Network
             </button>
             <button
               onMouseEnter={() => setActiveNode('GreyGoo')}
               onMouseLeave={() => setActiveNode(null)}
-              className="bg-zinc-900 border border-zinc-800 hover:border-sky-400 text-xs font-mono-tag text-zinc-300 hover:text-sky-400 py-2 px-3 rounded transition-colors"
+              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-xs transition-colors"
             >
               ⊙ Grey Goo Cloud
             </button>
             <button
               onMouseEnter={() => setActiveNode('Homunculus')}
               onMouseLeave={() => setActiveNode(null)}
-              className="bg-zinc-900 border border-zinc-800 hover:border-amber-400 text-xs font-mono-tag text-zinc-300 hover:text-amber-400 py-2 px-3 rounded transition-colors"
+              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-xs transition-colors"
             >
               ⊙ Penfield Axis
             </button>
@@ -99,7 +97,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <button
               onClick={onExploreClick}
-              className="px-6 py-3 rounded bg-[#FAFAFA] text-[#0A0A0B] font-mono-tag font-semibold text-xs tracking-wider hover:bg-sky-400 transition-colors shadow-sm"
+              className="px-6 py-3 rounded-md bg-[#000000] text-[#FFFFFF] font-mono-tag font-semibold text-xs tracking-wider hover:bg-zinc-800 transition-colors shadow-sm"
             >
               Explore 7-Part Series ↓
             </button>
@@ -108,7 +106,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
               href="https://substack.com/@natashabajc"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded border border-zinc-800 hover:border-amber-400 text-zinc-300 hover:text-amber-400 font-mono-tag text-xs tracking-wider transition-colors bg-zinc-900/40"
+              className="px-6 py-3 rounded-md border border-zinc-300 hover:border-black text-zinc-900 font-mono-tag text-xs tracking-wider transition-colors bg-white shadow-xs"
             >
               Read on Substack ↗
             </a>
@@ -116,9 +114,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
 
         </div>
 
-        {/* RIGHT COLUMN (Cols 8-12): Dedicated Viewport Frame with Technosomatic Homunculus Ring */}
-        <div className="lg:col-span-5 relative">
-          <div className="relative rounded-lg border border-zinc-800 bg-zinc-900/40 p-2 shadow-2xl overflow-hidden">
+        {/* RIGHT COLUMN (Cols 8-12): Native White Canvas/Image Frame with NO dark box container */}
+        <div className="lg:col-span-5 relative flex items-center justify-center">
+          <div className="w-full max-w-lg mx-auto bg-white flex items-center justify-center p-2">
             <HomunculusCanvas activeNode={activeNode} />
           </div>
         </div>

@@ -3,22 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --bg-color: #0A0A0B;
-    --text-primary: #FAFAFA;
-    --text-muted: #A1A1AA;
-    --border-color: #27272A;
-  }
-
   body {
-    background-color: #0A0A0B;
-    color: #FAFAFA;
+    background-color: #FFFFFF;
+    color: #09090B;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
   }
 }
 
-/* Utility Font Overrides */
 .font-serif-header {
   font-family: 'Instrument Serif', 'Cinzel', serif;
 }
@@ -27,17 +19,17 @@
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar for Stark Light Theme */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A0A0B;
+  background: #FFFFFF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272A;
+  background: #E4E4E7;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #38BDF8;
+  background: #09090B;
 }
