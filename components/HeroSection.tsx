@@ -123,3 +123,5 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
     </section>
   );
 };
+
+export default HeroSection;

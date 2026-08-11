@@ -148,3 +148,5 @@ export const EssayGrid: React.FC<EssayGridProps> = ({ onSelectEssay }) => {
     </section>
   );
 };
+
+export default EssayGrid;

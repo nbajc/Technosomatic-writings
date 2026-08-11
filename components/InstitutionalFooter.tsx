@@ -88,3 +88,5 @@ export const InstitutionalFooter: React.FC = () => {
     </footer>
   );
 };
+
+export default InstitutionalFooter;
