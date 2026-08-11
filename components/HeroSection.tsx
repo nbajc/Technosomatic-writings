@@ -11,169 +11,119 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
   const [activeNode, setActiveNode] = useState<string | null>(null);
 
   return (
-    <section className="relative w-full min-h-[92vh] pt-12 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col justify-center bg-[#060608]">
-      
-      {/* Architectural Grid Corner Crosshairs */}
-      <div className="absolute top-4 left-4 text-[#27272A] font-mono-code text-[10px] select-none pointer-events-none">
-        + SYS.COORD [48.21° N, -122.33° W]
-      </div>
-      <div className="absolute top-4 right-4 text-[#27272A] font-mono-code text-[10px] select-none pointer-events-none">
-        A²I.ROOT.FRAME // V1.0 +
-      </div>
-
-      {/* Top Academic Tag */}
-      <div className="flex items-center space-x-3 text-xs font-mono-code text-[#38BDF8] mb-6">
-        <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#38BDF8] opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#38BDF8]"></span>
-        </span>
-        <span className="tracking-widest uppercase text-[11px] font-semibold">
-          A²I Theoretical Framework // Natasha Bajc
-        </span>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <section id="hero" className="w-full min-h-[85vh] py-12 flex flex-col justify-center border-b border-zinc-800/60">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        {/* Left Column: Text & Exact Revised Hero Manifesto Copy */}
-        <div className="lg:col-span-7 space-y-8">
+        {/* LEFT COLUMN (Cols 1-7): Editorial Text Hierarchy */}
+        <div className="lg:col-span-7 space-y-6">
           
-          {/* Main Headline with clamp() Fluid Typography */}
-          <h1 className="clamp-hero-title font-cinzel font-bold text-[#FAFAFA] tracking-tight">
+          {/* Small Mono Tagline */}
+          <div className="text-xs font-mono-tag tracking-widest text-sky-400 font-semibold uppercase">
+            NATASHA BAJC // A²I TECHNOSOMATIC ARCHITECTURE
+          </div>
+
+          {/* H1 Headline */}
+          <h1 className="text-4xl md:text-6xl font-serif-header font-light leading-tight text-[#FAFAFA] tracking-tight">
             Architectural AI Has a <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] via-white to-[#F59E0B]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-zinc-100 to-amber-400">
               Missing Root Node.
             </span>
           </h1>
 
-          {/* Sub-headline with clamp() Fluid Typography */}
-          <p className="clamp-hero-subtitle font-sans text-zinc-300 font-light leading-relaxed">
+          {/* Sub-headline */}
+          <p className="text-lg text-zinc-400 font-sans font-light leading-normal">
             Re-inserting the embodied human nervous system into computational spatial intelligence.
           </p>
 
-          {/* Revised Hero Manifesto Statement */}
-          <div className="p-6 sm:p-8 rounded-2xl glass-panel border border-[#27272A] space-y-5 text-zinc-300 relative overflow-hidden group">
-            
-            {/* Subtle Gradient Glow Accent */}
-            <div className="absolute -right-20 -top-20 w-48 h-48 bg-[#38BDF8]/10 rounded-full blur-3xl pointer-events-none group-hover:bg-[#38BDF8]/20 transition-all duration-500" />
-
-            <p className="clamp-body-text font-sans leading-relaxed font-light">
+          {/* Manifesto Body Paragraph */}
+          <div className="p-6 rounded-lg bg-zinc-900/60 border border-zinc-800 text-sm leading-relaxed text-zinc-300 space-y-3">
+            <p>
               Generative neural networks promise rhizomatic fluidity, but their execution remains strictly{' '}
-              <span
+              <button
                 onMouseEnter={() => setActiveNode('Arborescent')}
                 onMouseLeave={() => setActiveNode(null)}
-                className="callout-highlight text-[#38BDF8] font-mono-code text-xs px-2 py-0.5 rounded border border-[#27272A] bg-[#0A0A0B]"
+                className="text-sky-400 border-b border-dashed border-sky-400 font-mono-tag text-xs px-1 hover:bg-sky-400/10 transition-colors"
               >
                 [arborescent—hierarchical trees]
-              </span>{' '}
+              </button>{' '}
               growing sequentially from an initial root.
             </p>
-            
-            <p className="clamp-body-text font-sans leading-relaxed font-light text-zinc-300/90">
+            <p>
               When that origin is built on flattened images rather than human neurobiology, the entire computational tree produces spatial hallucination.
             </p>
-            
-            <p className="clamp-body-text font-sans text-[#FAFAFA] font-medium border-l-2 border-[#38BDF8] pl-4 py-1.5 bg-[#38BDF8]/5 rounded-r">
+            <p className="text-[#FAFAFA] border-l-2 border-sky-400 pl-3 py-1 bg-sky-400/5 rounded-r">
               A²I acknowledges the antifragile power of network architectures, but enforces a fundamental correction: re-inserting the biological human nervous system as the non-negotiable{' '}
-              <span
+              <button
                 onMouseEnter={() => setActiveNode('RootNode')}
                 onMouseLeave={() => setActiveNode(null)}
-                className="callout-highlight text-[#F59E0B] font-mono-code text-xs px-2 py-0.5 rounded border border-[#27272A] bg-[#0A0A0B]"
+                className="text-amber-400 border-b border-dashed border-amber-400 font-mono-tag text-xs px-1 hover:bg-amber-400/10 transition-colors"
               >
                 [root node of spatial intelligence]
-              </span>.
+              </button>.
             </p>
           </div>
 
-          {/* Interactive Node Callout Bar */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+          {/* Interactive Node Bar: Styled flex wrap of crisp buttons */}
+          <div className="flex flex-wrap gap-2 pt-1">
             <button
               onMouseEnter={() => setActiveNode('RootNode')}
               onMouseLeave={() => setActiveNode(null)}
-              className="p-3.5 rounded-xl border border-[#27272A] bg-[#0A0A0B]/80 hover:border-[#38BDF8] transition-all flex flex-col space-y-1 text-left group hover:shadow-[0_0_20px_rgba(56,189,248,0.15)]"
+              className="bg-zinc-900 border border-zinc-800 hover:border-sky-400 text-xs font-mono-tag text-zinc-300 hover:text-sky-400 py-2 px-3 rounded transition-colors"
             >
-              <div className="flex items-center justify-between text-[#A1A1AA] group-hover:text-[#38BDF8]">
-                <span className="text-[10px] font-mono-code">NODE 01</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#38BDF8] opacity-60 group-hover:opacity-100" />
-              </div>
-              <span className="text-xs font-mono-code font-semibold text-[#FAFAFA] group-hover:text-[#38BDF8]">
-                Somatic Root
-              </span>
+              ⊙ Somatic Root
             </button>
-
             <button
               onMouseEnter={() => setActiveNode('Arborescent')}
               onMouseLeave={() => setActiveNode(null)}
-              className="p-3.5 rounded-xl border border-[#27272A] bg-[#0A0A0B]/80 hover:border-[#F59E0B] transition-all flex flex-col space-y-1 text-left group hover:shadow-[0_0_20px_rgba(245,158,11,0.15)]"
+              className="bg-zinc-900 border border-zinc-800 hover:border-amber-400 text-xs font-mono-tag text-zinc-300 hover:text-amber-400 py-2 px-3 rounded transition-colors"
             >
-              <div className="flex items-center justify-between text-[#A1A1AA] group-hover:text-[#F59E0B]">
-                <span className="text-[10px] font-mono-code">NODE 02</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] opacity-60 group-hover:opacity-100" />
-              </div>
-              <span className="text-xs font-mono-code font-semibold text-[#FAFAFA] group-hover:text-[#F59E0B]">
-                Arborescent Tree
-              </span>
+              ⊙ Arborescent Network
             </button>
-
             <button
               onMouseEnter={() => setActiveNode('GreyGoo')}
               onMouseLeave={() => setActiveNode(null)}
-              className="p-3.5 rounded-xl border border-[#27272A] bg-[#0A0A0B]/80 hover:border-[#38BDF8] transition-all flex flex-col space-y-1 text-left group hover:shadow-[0_0_20px_rgba(56,189,248,0.15)]"
+              className="bg-zinc-900 border border-zinc-800 hover:border-sky-400 text-xs font-mono-tag text-zinc-300 hover:text-sky-400 py-2 px-3 rounded transition-colors"
             >
-              <div className="flex items-center justify-between text-[#A1A1AA] group-hover:text-[#38BDF8]">
-                <span className="text-[10px] font-mono-code">NODE 03</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#38BDF8] opacity-60 group-hover:opacity-100" />
-              </div>
-              <span className="text-xs font-mono-code font-semibold text-[#FAFAFA] group-hover:text-[#38BDF8]">
-                Grey Goo Cloud
-              </span>
+              ⊙ Grey Goo Cloud
             </button>
-
             <button
               onMouseEnter={() => setActiveNode('Homunculus')}
               onMouseLeave={() => setActiveNode(null)}
-              className="p-3.5 rounded-xl border border-[#27272A] bg-[#0A0A0B]/80 hover:border-[#F59E0B] transition-all flex flex-col space-y-1 text-left group hover:shadow-[0_0_20px_rgba(245,158,11,0.15)]"
+              className="bg-zinc-900 border border-zinc-800 hover:border-amber-400 text-xs font-mono-tag text-zinc-300 hover:text-amber-400 py-2 px-3 rounded transition-colors"
             >
-              <div className="flex items-center justify-between text-[#A1A1AA] group-hover:text-[#F59E0B]">
-                <span className="text-[10px] font-mono-code">NODE 04</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] opacity-60 group-hover:opacity-100" />
-              </div>
-              <span className="text-xs font-mono-code font-semibold text-[#FAFAFA] group-hover:text-[#F59E0B]">
-                Penfield Axis
-              </span>
+              ⊙ Penfield Axis
             </button>
           </div>
 
-          {/* Action CTAs */}
-          <div className="flex flex-wrap items-center gap-4 pt-4">
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap items-center gap-4 pt-2">
             <button
               onClick={onExploreClick}
-              className="px-7 py-3.5 rounded-xl bg-[#FAFAFA] text-[#060608] font-mono-code font-semibold text-xs tracking-wider flex items-center space-x-2.5 hover:bg-[#38BDF8] transition-all shadow-[0_0_25px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(56,189,248,0.5)] transform hover:-translate-y-0.5"
+              className="px-6 py-3 rounded bg-[#FAFAFA] text-[#0A0A0B] font-mono-tag font-semibold text-xs tracking-wider hover:bg-sky-400 transition-colors shadow-sm"
             >
-              <span>EXPLORE 7-PART ESSAY SERIES</span>
-              <span className="animate-bounce">↓</span>
+              Explore 7-Part Series ↓
             </button>
 
             <a
               href="https://substack.com/@natashabajc"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-7 py-3.5 rounded-xl border border-[#27272A] bg-[#0A0A0B]/50 hover:border-[#F59E0B] text-zinc-300 hover:text-[#F59E0B] font-mono-code text-xs tracking-wider transition-all transform hover:-translate-y-0.5"
+              className="px-6 py-3 rounded border border-zinc-800 hover:border-amber-400 text-zinc-300 hover:text-amber-400 font-mono-tag text-xs tracking-wider transition-colors bg-zinc-900/40"
             >
-              READ ON SUBSTACK ↗
+              Read on Substack ↗
             </a>
           </div>
 
         </div>
 
-        {/* Right Column: Arborescent Canvas Graphic with Technosomatic Logo Asset */}
+        {/* RIGHT COLUMN (Cols 8-12): Dedicated Viewport Frame with Technosomatic Homunculus Ring */}
         <div className="lg:col-span-5 relative">
-          <div className="relative rounded-2xl glass-panel p-2 border border-[#27272A] shadow-[0_0_60px_rgba(56,189,248,0.12)]">
+          <div className="relative rounded-lg border border-zinc-800 bg-zinc-900/40 p-2 shadow-2xl overflow-hidden">
             <HomunculusCanvas activeNode={activeNode} />
           </div>
         </div>
 
       </div>
-
     </section>
   );
 };

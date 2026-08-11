@@ -9,20 +9,7 @@ import { InstitutionalFooter } from '../components/InstitutionalFooter';
 import { ESSAY_SERIES, Essay } from '../lib/essays-data';
 
 export default function Home() {
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [selectedEssay, setSelectedEssay] = useState<Essay | null>(null);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    if (newTheme === 'light') {
-      document.documentElement.classList.remove('dark');
-      document.documentElement.classList.add('light-theme');
-    } else {
-      document.documentElement.classList.remove('light-theme');
-      document.documentElement.classList.add('dark');
-    }
-  };
 
   const handleSelectSection = (sectionId: string) => {
     if (selectedEssay) {
@@ -51,43 +38,39 @@ export default function Home() {
   };
 
   return (
-    <main className={`min-h-screen bg-background text-primary selection:bg-cyan-500/30`}>
+    <div className="min-h-screen bg-[#0A0A0B] text-[#FAFAFA] antialiased">
       
-      {/* Navigation Header */}
-      <Header
-        currentTheme={theme}
-        onToggleTheme={toggleTheme}
-        onSelectSection={handleSelectSection}
-      />
+      {/* Floating Navigation Header */}
+      <Header onSelectSection={handleSelectSection} />
 
-      {/* Main View Area */}
-      {selectedEssay ? (
-        <ReaderView
-          essay={selectedEssay}
-          onBack={() => setSelectedEssay(null)}
-          onSelectEssay={(essay) => {
-            setSelectedEssay(essay);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-        />
-      ) : (
-        <>
-          <div id="hero">
-            <HeroSection onExploreClick={scrollToEssays} />
-          </div>
-
-          <EssayGrid
+      {/* Main Centered Fluid Responsive Container */}
+      <main className="max-w-7xl mx-auto px-6 md:px-12">
+        {selectedEssay ? (
+          <ReaderView
+            essay={selectedEssay}
+            onBack={() => setSelectedEssay(null)}
             onSelectEssay={(essay) => {
               setSelectedEssay(essay);
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           />
-        </>
-      )}
+        ) : (
+          <>
+            <HeroSection onExploreClick={scrollToEssays} />
 
-      {/* Footer & Institutional Distinction Note */}
-      <InstitutionalFooter />
+            <EssayGrid
+              onSelectEssay={(essay) => {
+                setSelectedEssay(essay);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            />
+          </>
+        )}
 
-    </main>
+        {/* Footer */}
+        <InstitutionalFooter />
+      </main>
+
+    </div>
   );
 }
