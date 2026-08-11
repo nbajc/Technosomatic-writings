@@ -8,6 +8,12 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ onSelectSection }) => {
+  const handleNavClick = (sectionId: string) => {
+    if (onSelectSection) {
+      onSelectSection(sectionId);
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 border-b border-zinc-200 py-4 px-6 md:px-12 transition-colors duration-300">
       <div className="max-w-7xl mx-auto flex items-center justify-between">

@@ -1,30 +1,17 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { ESSAY_SERIES } from '../../../lib/essays-data';
-import { Header } from '../../../components/Header';
-import { InstitutionalFooter } from '../../../components/InstitutionalFooter';
+import { Essay, ESSAY_SERIES } from '../lib/essays-data';
+import { Header } from './Header';
+import { InstitutionalFooter } from './InstitutionalFooter';
 import katex from 'katex';
 
-interface EssayPageProps {
-  params: {
-    slug: string;
-  };
+interface EssayDetailViewProps {
+  essay: Essay;
 }
 
-export function generateStaticParams() {
-  return ESSAY_SERIES.map((essay) => ({
-    slug: essay.slug,
-  }));
-}
-
-export default function EssayPage({ params }: EssayPageProps) {
-  const essay = ESSAY_SERIES.find((e) => e.slug === params.slug);
-
-  if (!essay) {
-    notFound();
-  }
-
+export const EssayDetailView: React.FC<EssayDetailViewProps> = ({ essay }) => {
   const currentIndex = ESSAY_SERIES.findIndex((e) => e.slug === essay.slug);
   const prevEssay = currentIndex > 0 ? ESSAY_SERIES[currentIndex - 1] : null;
   const nextEssay = currentIndex < ESSAY_SERIES.length - 1 ? ESSAY_SERIES[currentIndex + 1] : null;
@@ -168,4 +155,4 @@ export default function EssayPage({ params }: EssayPageProps) {
 
     </div>
   );
-}
+};

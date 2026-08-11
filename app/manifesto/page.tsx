@@ -12,7 +12,7 @@ export default function ManifestoPage() {
     <div className="min-h-screen bg-white text-[#09090B] antialiased">
       
       {/* Navigation Header */}
-      <Header onSelectSection={() => {}} />
+      <Header />
 
       {/* Main Centered Container */}
       <main className="max-w-3xl mx-auto px-6 py-12 bg-white">

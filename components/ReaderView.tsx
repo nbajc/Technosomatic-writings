@@ -180,6 +180,13 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
 
         </header>
 
+        {/* Key Quote Callout */}
+        {essay.quoteCallout && (
+          <blockquote className="border-l-2 border-sky-500 pl-6 my-8 italic text-zinc-700 text-xl font-serif-header">
+            "{essay.quoteCallout}"
+          </blockquote>
+        )}
+
         {/* Content */}
         <div className="space-y-10 text-base leading-relaxed text-zinc-800 font-light">
           {essay.content.map((sec, idx) => (
@@ -189,15 +196,11 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
                 {sec.sectionTitle}
               </h2>
 
-              <p className="leading-relaxed">
-                {sec.text}
-              </p>
-
-              {sec.quote && (
-                <blockquote className="my-6 p-6 rounded-r-md bg-zinc-50 border-l-4 border-black italic font-serif text-lg text-zinc-900">
-                  "{sec.quote}"
-                </blockquote>
-              )}
+              {sec.paragraphs.map((p, pIdx) => (
+                <p key={pIdx} className="leading-relaxed">
+                  {p}
+                </p>
+              ))}
 
               {sec.latexFormula && (
                 <div className="my-6 p-4 rounded-md bg-zinc-50 border border-zinc-200 text-center font-mono-tag text-black overflow-x-auto">
