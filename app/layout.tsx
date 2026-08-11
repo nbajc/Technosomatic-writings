@@ -1,33 +1,15 @@
-import type { Metadata } from 'next';
 import './globals.css';
+import React from 'react';
 
-export const metadata: Metadata = {
-  title: 'Technosomatic Architecture & A²I Sovereign Web Hub | Natasha Bajc',
-  description:
-    'Primary sovereign web hub hosting the A²I (Architectural Artificial Intelligence) theoretical framework, Technosomatic Manifesto, and 7-part essay series by architect Natasha Bajc.',
-  openGraph: {
-    title: 'Technosomatic Architecture & A²I | Natasha Bajc',
-    description: 'Re-inserting the embodied human nervous system into computational spatial intelligence.',
-    type: 'website',
-  },
+export const metadata = {
+  title: 'Technosomatic Architecture & A²I | Natasha Bajc',
+  description: 'Re-inserting the embodied human nervous system into computational spatial intelligence.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="bg-white text-[#09090B]">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="bg-white text-[#09090B] antialiased min-h-screen">
+    <html lang="en" className="bg-white text-zinc-900 antialiased">
+      <body className="min-h-screen bg-white text-zinc-900 selection:bg-sky-100 selection:text-sky-900">
         {children}
       </body>
     </html>
