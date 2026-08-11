@@ -12,29 +12,29 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
   const [activeNode, setActiveNode] = useState<string | null>(null);
 
   return (
-    <section id="hero" className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-white min-h-[75vh] border-b border-zinc-200">
+    <section id="hero" className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center py-8 md:py-16 border-b border-zinc-200 bg-white">
       
-      {/* LEFT COLUMN (Cols 1-7): Text Content */}
-      <div className="lg:col-span-7 flex flex-col justify-center">
+      {/* LEFT COLUMN (Cols 1-7): Architectural Text Hierarchy */}
+      <div className="lg:col-span-7 flex flex-col justify-center space-y-4">
         
-        {/* Small Tagline */}
-        <div className="text-xs font-mono text-sky-600 tracking-widest uppercase mb-2 font-bold">
+        {/* Sharp Monospace Tagline */}
+        <div className="font-mono text-xs text-sky-600 tracking-wider uppercase font-bold">
           NATASHA BAJC // A²I TECHNOSOMATIC ARCHITECTURE
         </div>
 
-        {/* H1 Headline */}
-        <h1 className="text-4xl md:text-5xl font-serif text-zinc-900 font-light leading-tight mb-4">
+        {/* High-Contrast Editorial Serif Headline */}
+        <h1 className="font-serif font-light text-zinc-900 text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">
           Architectural AI Has a Missing Root Node.
         </h1>
 
-        {/* Subhead */}
-        <p className="text-lg text-zinc-600 mb-6 font-sans font-light">
+        {/* High-Readability Sans-Serif Sub-headline */}
+        <p className="font-sans text-zinc-700 text-base md:text-lg leading-relaxed">
           Re-inserting the embodied human nervous system into computational spatial intelligence.
         </p>
 
-        {/* Manifesto Body Box */}
-        <div className="p-5 mb-6 rounded-lg bg-zinc-50 border border-zinc-200 text-xs sm:text-sm leading-relaxed text-zinc-800 space-y-2.5 shadow-xs">
-          <p>
+        {/* Manifesto Excerpt Box */}
+        <div className="p-5 rounded-lg bg-zinc-50 border border-zinc-200 text-xs sm:text-sm leading-relaxed text-zinc-800 space-y-2.5 shadow-xs">
+          <p className="font-sans">
             Generative neural networks promise rhizomatic fluidity, but their execution remains strictly{' '}
             <button
               onMouseEnter={() => setActiveNode('Arborescent')}
@@ -45,10 +45,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
             </button>{' '}
             growing sequentially from an initial root.
           </p>
-          <p>
+          <p className="font-sans">
             When that origin is built on flattened images rather than human neurobiology, the entire computational tree produces spatial hallucination.
           </p>
-          <p className="text-[#09090B] font-medium border-l-2 border-black pl-3 py-1 bg-zinc-100 rounded-r">
+          <p className="font-sans text-zinc-900 font-medium border-l-2 border-black pl-3 py-1 bg-zinc-100 rounded-r">
             A²I acknowledges the antifragile power of network architectures, but enforces a fundamental correction: re-inserting the biological human nervous system as the non-negotiable{' '}
             <button
               onMouseEnter={() => setActiveNode('RootNode')}
@@ -60,8 +60,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
           </p>
         </div>
 
-        {/* Interactive Node Buttons */}
-        <div className="flex flex-wrap gap-2 mb-6">
+        {/* Monospace Interactive Node Buttons */}
+        <div className="flex flex-wrap gap-2 pt-1">
           <button
             onMouseEnter={() => setActiveNode('RootNode')}
             onMouseLeave={() => setActiveNode(null)}
@@ -92,8 +92,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
           </button>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-wrap items-center gap-3">
+        {/* Primary Action Buttons */}
+        <div className="flex flex-wrap items-center gap-3 pt-2">
           <Link
             href="/manifesto"
             className="bg-black text-white hover:bg-zinc-800 text-sm font-semibold py-3 px-6 rounded-md shadow-sm transition-colors inline-block"
@@ -113,9 +113,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
 
       </div>
 
-      {/* RIGHT COLUMN (Cols 8-12): Logo Aspect-Ratio Fix */}
-      <div className="lg:col-span-5 flex justify-center items-center">
-        <div className="w-full max-w-[420px] mx-auto bg-white flex justify-center items-center">
+      {/* RIGHT COLUMN (Cols 8-12): Homunculus Ring Frame */}
+      <div className="lg:col-span-5 flex items-center justify-center p-2 bg-white">
+        <div className="w-full max-w-[420px] mx-auto bg-white flex items-center justify-center">
           <HomunculusCanvas activeNode={activeNode} />
         </div>
       </div>

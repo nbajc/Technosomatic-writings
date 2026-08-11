@@ -33,10 +33,10 @@ export const EssayGrid: React.FC<EssayGridProps> = ({ onSelectEssay }) => {
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-zinc-200 pb-6">
         <div>
-          <div className="text-xs font-mono-tag text-zinc-900 tracking-widest uppercase mb-1 font-bold">
+          <div className="font-mono text-xs text-sky-600 tracking-wider uppercase mb-1 font-bold">
             THE 7-PART A²I ESSAY SERIES
           </div>
-          <h2 className="text-3xl md:text-4xl font-serif-header font-bold text-[#09090B]">
+          <h2 className="text-3xl md:text-4xl font-serif font-light text-zinc-900">
             Theoretical Framework & Roadmap
           </h2>
           <p className="text-sm font-sans text-zinc-600 mt-1 max-w-2xl font-light">
@@ -51,21 +51,21 @@ export const EssayGrid: React.FC<EssayGridProps> = ({ onSelectEssay }) => {
             placeholder="Search concepts, tags..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-3 py-2 rounded-md bg-white border border-zinc-300 text-xs font-mono-tag text-[#09090B] placeholder-zinc-500 focus:border-black focus:outline-none transition-colors shadow-xs"
+            className="w-full px-3 py-2 rounded-md bg-white border border-zinc-300 text-xs font-mono text-zinc-900 placeholder-zinc-500 focus:border-black focus:outline-none transition-colors shadow-xs"
           />
         </div>
       </div>
 
       {/* Filter Badges */}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="text-xs font-mono-tag text-zinc-500 mr-2 font-semibold">FILTER:</span>
+        <span className="text-xs font-mono text-zinc-500 mr-2 font-semibold">FILTER:</span>
         {ALL_TAGS.map((tag) => (
           <button
             key={tag}
             onClick={() => setSelectedTag(tag)}
-            className={`px-3 py-1 rounded-md text-xs font-mono-tag transition-all ${
+            className={`px-3 py-1 rounded-md text-xs font-mono transition-all ${
               selectedTag === tag
-                ? 'bg-[#000000] text-[#FFFFFF] font-semibold shadow-xs'
+                ? 'bg-black text-white font-semibold shadow-xs'
                 : 'bg-white border border-zinc-300 text-zinc-800 hover:border-black'
             }`}
           >
@@ -74,17 +74,17 @@ export const EssayGrid: React.FC<EssayGridProps> = ({ onSelectEssay }) => {
         ))}
       </div>
 
-      {/* Structured Editorial Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Structured Editorial Cards Grid: 2-Column Desktop Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
         {filteredEssays.map((essay) => (
           <div
             key={essay.id}
-            className="border border-zinc-200 bg-white hover:border-zinc-400 p-6 rounded-lg transition-all flex flex-col justify-between group shadow-xs hover:shadow-md"
+            className="p-6 bg-white border border-zinc-200 rounded-lg hover:border-black transition-all shadow-sm flex flex-col justify-between group"
           >
             
             <div className="space-y-4">
               {/* Metadata Badges */}
-              <div className="flex items-center justify-between text-xs font-mono-tag text-zinc-600 border-b border-zinc-200 pb-3 font-medium">
+              <div className="flex items-center justify-between text-xs font-mono text-zinc-600 border-b border-zinc-200 pb-3 font-medium">
                 <span className="px-2 py-0.5 rounded bg-zinc-100 border border-zinc-200 text-zinc-900 font-bold">
                   {essay.part}
                 </span>
@@ -95,7 +95,7 @@ export const EssayGrid: React.FC<EssayGridProps> = ({ onSelectEssay }) => {
               <div>
                 <Link 
                   href={`/essays/${essay.slug}`}
-                  className="text-2xl font-serif-header font-bold text-[#09090B] group-hover:text-black transition-colors cursor-pointer leading-snug block"
+                  className="text-2xl font-serif font-light text-zinc-900 group-hover:text-black transition-colors cursor-pointer leading-snug block"
                 >
                   {essay.title}
                 </Link>
@@ -114,7 +114,7 @@ export const EssayGrid: React.FC<EssayGridProps> = ({ onSelectEssay }) => {
                 {essay.tags.map((t) => (
                   <span
                     key={t}
-                    className="text-[10px] font-mono-tag px-2 py-0.5 rounded bg-zinc-100 text-zinc-800 border border-zinc-200 font-medium"
+                    className="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-100 text-zinc-800 border border-zinc-200 font-medium"
                   >
                     #{t}
                   </span>
@@ -126,7 +126,7 @@ export const EssayGrid: React.FC<EssayGridProps> = ({ onSelectEssay }) => {
             <div className="pt-6 mt-6 border-t border-zinc-200 flex items-center justify-between">
               <Link
                 href={`/essays/${essay.slug}`}
-                className="text-xs font-mono-tag font-bold text-[#09090B] hover:underline flex items-center space-x-1"
+                className="text-xs font-mono font-bold text-zinc-900 hover:underline flex items-center space-x-1"
               >
                 <span>READ ON-SITE →</span>
               </Link>
@@ -135,7 +135,7 @@ export const EssayGrid: React.FC<EssayGridProps> = ({ onSelectEssay }) => {
                 href={essay.substackUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-mono-tag text-zinc-500 hover:text-black transition-colors"
+                className="text-xs font-mono text-zinc-500 hover:text-black transition-colors"
               >
                 Substack ↗
               </a>
