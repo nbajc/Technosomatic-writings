@@ -14,7 +14,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
     <section id="hero" className="w-full py-8 md:py-16 border-b border-zinc-200 bg-white">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
-        {/* LEFT COLUMN (Cols 1-7): Tight Editorial Text Hierarchy */}
+        {/* LEFT COLUMN (Cols 1-7): Tight Editorial Hierarchy */}
         <div className="lg:col-span-7 flex flex-col justify-center space-y-4">
           
           {/* Small Mono Tagline */}
@@ -29,7 +29,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
           </h1>
 
           {/* Sub-headline */}
-          <p className="text-base md:text-lg text-zinc-600 font-sans font-light leading-normal">
+          <p className="text-base md:text-lg text-[#52525B] font-sans font-light leading-normal">
             Re-inserting the embodied human nervous system into computational spatial intelligence.
           </p>
 
@@ -61,33 +61,33 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
             </p>
           </div>
 
-          {/* Interactive Node Bar: White background with 1px black border */}
+          {/* Interactive Node Bar: White background with 1px border */}
           <div className="flex flex-wrap gap-2 pt-1">
             <button
               onMouseEnter={() => setActiveNode('RootNode')}
               onMouseLeave={() => setActiveNode(null)}
-              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-xs transition-colors"
+              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-sm transition-colors"
             >
               ⊙ Somatic Root
             </button>
             <button
               onMouseEnter={() => setActiveNode('Arborescent')}
               onMouseLeave={() => setActiveNode(null)}
-              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-xs transition-colors"
+              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-sm transition-colors"
             >
               ⊙ Arborescent Network
             </button>
             <button
               onMouseEnter={() => setActiveNode('GreyGoo')}
               onMouseLeave={() => setActiveNode(null)}
-              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-xs transition-colors"
+              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-sm transition-colors"
             >
               ⊙ Grey Goo Cloud
             </button>
             <button
               onMouseEnter={() => setActiveNode('Homunculus')}
               onMouseLeave={() => setActiveNode(null)}
-              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-xs transition-colors"
+              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-sm transition-colors"
             >
               ⊙ Penfield Axis
             </button>
@@ -116,7 +116,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
 
         {/* RIGHT COLUMN (Cols 8-12): Perfect 1:1 Aspect-Square Unsquished Technosomatic Ring Frame */}
         <div className="lg:col-span-5 flex items-center justify-center p-2 bg-white">
-          <div className="w-full max-w-[500px] mx-auto bg-white flex items-center justify-center">
+          <div className="w-full max-w-[480px] mx-auto bg-white flex items-center justify-center">
             <HomunculusCanvas activeNode={activeNode} />
           </div>
         </div>
