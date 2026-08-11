@@ -44,7 +44,7 @@ export default function Home() {
       <Header onSelectSection={handleSelectSection} />
 
       {/* Main Centered Fluid Responsive Container */}
-      <main className="max-w-7xl mx-auto px-6 md:px-12 bg-white">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-white">
         {selectedEssay ? (
           <ReaderView
             essay={selectedEssay}

@@ -11,11 +11,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
   const [activeNode, setActiveNode] = useState<string | null>(null);
 
   return (
-    <section id="hero" className="w-full min-h-[85vh] py-12 flex flex-col justify-center border-b border-zinc-200 bg-white">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <section id="hero" className="w-full py-8 md:py-16 border-b border-zinc-200 bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
-        {/* LEFT COLUMN (Cols 1-7): Clean Editorial Hierarchy */}
-        <div className="lg:col-span-7 space-y-6">
+        {/* LEFT COLUMN (Cols 1-7): Tight Editorial Text Hierarchy */}
+        <div className="lg:col-span-7 flex flex-col justify-center space-y-4">
           
           {/* Small Mono Tagline */}
           <div className="text-xs font-mono-tag tracking-widest text-[#18181B] font-bold uppercase">
@@ -23,18 +23,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
           </div>
 
           {/* H1 Headline */}
-          <h1 className="text-4xl md:text-6xl font-serif-header font-bold text-[#09090B] leading-tight tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif-header font-bold text-[#09090B] leading-tight tracking-tight">
             Architectural AI Has a <br />
             Missing Root Node.
           </h1>
 
           {/* Sub-headline */}
-          <p className="text-lg text-zinc-600 font-sans font-light leading-normal">
+          <p className="text-base md:text-lg text-zinc-600 font-sans font-light leading-normal">
             Re-inserting the embodied human nervous system into computational spatial intelligence.
           </p>
 
           {/* Manifesto Body Paragraphs */}
-          <div className="p-6 rounded-lg bg-zinc-50 border border-zinc-200 text-sm leading-relaxed text-zinc-800 space-y-3 shadow-xs">
+          <div className="p-5 rounded-lg bg-zinc-50 border border-zinc-200 text-xs sm:text-sm leading-relaxed text-zinc-800 space-y-2.5 shadow-xs">
             <p>
               Generative neural networks promise rhizomatic fluidity, but their execution remains strictly{' '}
               <button
@@ -94,7 +94,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center gap-3 pt-2">
             <button
               onClick={onExploreClick}
               className="px-6 py-3 rounded-md bg-[#000000] text-[#FFFFFF] font-mono-tag font-semibold text-xs tracking-wider hover:bg-zinc-800 transition-colors shadow-sm"
@@ -114,9 +114,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
 
         </div>
 
-        {/* RIGHT COLUMN (Cols 8-12): Native White Canvas/Image Frame with NO dark box container */}
-        <div className="lg:col-span-5 relative flex items-center justify-center">
-          <div className="w-full max-w-lg mx-auto bg-white flex items-center justify-center p-2">
+        {/* RIGHT COLUMN (Cols 8-12): Perfect 1:1 Aspect-Square Unsquished Technosomatic Ring Frame */}
+        <div className="lg:col-span-5 flex items-center justify-center p-2 bg-white">
+          <div className="w-full max-w-[500px] mx-auto bg-white flex items-center justify-center">
             <HomunculusCanvas activeNode={activeNode} />
           </div>
         </div>
