@@ -15,50 +15,58 @@ export const Header: React.FC<HeaderProps> = ({
   onSelectSection,
 }) => {
   return (
-    <header className="sticky top-0 z-50 w-full glass-header transition-colors duration-300">
+    <header className="sticky top-0 z-50 w-full glass-header transition-colors duration-300 border-b border-[#27272A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         
-        {/* Brand & Homunculus Icon */}
+        {/* Custom Technosomatic Penfield Homunculus Logo */}
         <div 
           onClick={() => onSelectSection('hero')}
           className="flex items-center space-x-3 cursor-pointer group"
         >
-          <div className="relative w-8 h-8 flex items-center justify-center rounded-full border border-zinc-700 bg-zinc-950 group-hover:border-cyan-400 transition-colors">
-            <svg viewBox="0 0 100 100" className="w-5 h-5 fill-none stroke-current text-cyan-400 group-hover:rotate-45 transition-transform duration-500">
-              <circle cx="50" cy="50" r="42" strokeWidth="6" strokeDasharray="180 30" />
-              <circle cx="50" cy="50" r="28" strokeWidth="4" strokeDasharray="100 20" />
-              <circle cx="50" cy="50" r="10" strokeWidth="3" className="fill-cyan-400" />
-              <line x1="50" y1="8" x2="50" y2="92" strokeWidth="3" />
-              <line x1="8" y1="50" x2="92" y2="50" strokeWidth="3" />
+          <div className="relative w-9 h-9 flex items-center justify-center rounded-full border border-[#27272A] bg-[#0A0A0B] group-hover:border-[#38BDF8] transition-colors overflow-hidden">
+            <svg viewBox="0 0 100 100" className="w-7 h-7 fill-none stroke-current text-[#FAFAFA] group-hover:text-[#38BDF8] transition-colors">
+              {/* Outer Homunculus Radial Ring Arc */}
+              <circle cx="50" cy="50" r="42" stroke="#27272A" strokeWidth="1.5" strokeDasharray="3 3" />
+              <path d="M 12,50 A 38,38 0 1,1 88,50" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+              {/* Cortical Homunculus Brain Axis Line */}
+              <path d="M 50,12 C 35,28 35,72 50,88" stroke="#38BDF8" strokeWidth="1.5" strokeDasharray="2 2" />
+              <path d="M 50,12 C 65,28 65,72 50,88" stroke="#38BDF8" strokeWidth="1.5" strokeDasharray="2 2" />
+              {/* Arborescent Vector Node Lines */}
+              <line x1="50" y1="50" x2="22" y2="30" stroke="currentColor" strokeWidth="1" />
+              <line x1="50" y1="50" x2="78" y2="30" stroke="currentColor" strokeWidth="1" />
+              <line x1="50" y1="50" x2="20" y2="65" stroke="currentColor" strokeWidth="1" />
+              <line x1="50" y1="50" x2="80" y2="65" stroke="currentColor" strokeWidth="1" />
+              {/* Somatic Central Root Node */}
+              <circle cx="50" cy="50" r="5" className="fill-[#38BDF8] stroke-[#0A0A0B]" strokeWidth="2" />
             </svg>
           </div>
           <div className="flex flex-col">
-            <span className="font-cinzel tracking-wider text-sm font-semibold text-zinc-100 group-hover:text-cyan-400 transition-colors">
+            <span className="font-cinzel tracking-wider text-sm font-bold text-[#FAFAFA] group-hover:text-[#38BDF8] transition-colors">
               NATASHA BAJC
             </span>
-            <span className="font-mono-code text-[10px] tracking-widest text-zinc-400">
+            <span className="font-mono-code text-[10px] tracking-widest text-[#A1A1AA]">
               A²I // TECHNOSOMATIC ARCHITECTURE
             </span>
           </div>
         </div>
 
         {/* Navigation Links */}
-        <nav className="hidden md:flex items-center space-x-6 text-xs font-mono-code text-zinc-400">
+        <nav className="hidden md:flex items-center space-x-6 text-xs font-mono-code text-[#A1A1AA]">
           <button
             onClick={() => onSelectSection('manifesto')}
-            className="hover:text-cyan-400 transition-colors tracking-widest"
+            className="hover:text-[#38BDF8] transition-colors tracking-widest"
           >
             [ MANIFESTO ]
           </button>
           <button
             onClick={() => onSelectSection('essays')}
-            className="hover:text-cyan-400 transition-colors tracking-widest"
+            className="hover:text-[#38BDF8] transition-colors tracking-widest"
           >
             [ FRAMEWORK / ESSAYS ]
           </button>
           <button
             onClick={() => onSelectSection('about')}
-            className="hover:text-cyan-400 transition-colors tracking-widest"
+            className="hover:text-[#38BDF8] transition-colors tracking-widest"
           >
             [ ABOUT ]
           </button>
@@ -66,7 +74,7 @@ export const Header: React.FC<HeaderProps> = ({
             href="https://substack.com/@natashabajc"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-1 hover:text-amber-400 transition-colors tracking-widest"
+            className="flex items-center space-x-1 hover:text-[#F59E0B] transition-colors tracking-widest"
           >
             <span>[ SUBSTACK</span>
             <ExternalLink className="w-3 h-3" />
@@ -79,12 +87,12 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             onClick={onToggleTheme}
             title="Toggle High-Contrast Mode"
-            className="p-2 rounded-md border border-zinc-800 hover:border-zinc-600 text-zinc-400 hover:text-zinc-100 transition-colors"
+            className="p-2 rounded-md border border-[#27272A] hover:border-[#38BDF8] text-[#A1A1AA] hover:text-[#FAFAFA] transition-colors"
           >
             {currentTheme === 'dark' ? (
-              <Sun className="w-4 h-4 text-amber-400" />
+              <Sun className="w-4 h-4 text-[#F59E0B]" />
             ) : (
-              <Moon className="w-4 h-4 text-cyan-500" />
+              <Moon className="w-4 h-4 text-[#38BDF8]" />
             )}
           </button>
 
@@ -92,7 +100,7 @@ export const Header: React.FC<HeaderProps> = ({
             href="https://substack.com/@natashabajc"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono-code font-semibold tracking-wider text-zinc-950 bg-cyan-400 hover:bg-cyan-300 transition-all shadow-[0_0_15px_rgba(56,189,248,0.3)] hover:shadow-[0_0_20px_rgba(56,189,248,0.5)]"
+            className="flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono-code font-semibold tracking-wider text-[#0A0A0B] bg-[#38BDF8] hover:bg-cyan-300 transition-all shadow-[0_0_15px_rgba(56,189,248,0.3)] hover:shadow-[0_0_20px_rgba(56,189,248,0.5)]"
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>SUBSCRIBE</span>
