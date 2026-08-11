@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { HomunculusCanvas } from './HomunculusCanvas';
-import { ArrowDown, Brain, Activity, Compass, ShieldCheck, GitBranch } from 'lucide-react';
 
 interface HeroSectionProps {
   onExploreClick: () => void;
@@ -12,7 +11,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
   const [activeNode, setActiveNode] = useState<string | null>(null);
 
   return (
-    <section className="relative w-full min-h-[90vh] pt-12 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col justify-center bg-[#0A0A0B]">
+    <section className="relative w-full min-h-[90vh] pt-10 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col justify-center bg-[#0A0A0B]">
       
       {/* Top Academic Tag */}
       <div className="flex items-center space-x-2 text-xs font-mono-code text-[#38BDF8] mb-6">
@@ -24,7 +23,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        {/* Left Column: Text & Interactive Callouts */}
+        {/* Left Column: Text & Exact Revised Hero Manifesto Copy */}
         <div className="lg:col-span-7 space-y-8">
           
           {/* Main Headline */}
@@ -40,89 +39,85 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
             Re-inserting the embodied human nervous system into computational spatial intelligence.
           </p>
 
-          {/* 3-Sentence Manifesto Statement with Interactive Callout Highlights */}
-          <div className="p-6 rounded-xl glass-panel border border-[#27272A] space-y-4 text-sm sm:text-base leading-relaxed text-zinc-300">
+          {/* Revised Hero Manifesto Statement */}
+          <div className="p-6 rounded-xl bg-[#0A0A0B] border border-[#27272A] space-y-4 text-sm sm:text-base leading-relaxed text-zinc-300 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
             <p>
-              Generative spatial models threaten to flood our physical world with homogenized, disembodied renders—a synthetic grey goo devoid of biological resonance. By anchoring spatial algorithms directly into an{' '}
+              Generative neural networks promise rhizomatic fluidity, but their execution remains strictly{' '}
               <span
-                onMouseEnter={() => setActiveNode('Kopf')}
+                onMouseEnter={() => setActiveNode('Arborescent')}
                 onMouseLeave={() => setActiveNode(null)}
-                className="callout-highlight text-[#38BDF8] font-mono-code text-xs px-1.5 py-0.5 rounded border border-[#27272A]"
+                className="cursor-pointer border-b border-dashed border-[#38BDF8] text-[#38BDF8] font-mono-code text-xs px-1 py-0.5 rounded hover:bg-[#38BDF8]/10 transition-colors"
               >
-                [Arborescent Root Network]
+                [arborescent—hierarchical trees]
               </span>{' '}
-              anchored to the Penfield Cortical Homunculus ring, we re-establish space as an active biological extension.
+              growing sequentially from an initial root.
             </p>
             <p>
-              Technosomatic Architecture replaces passive CAD geometric primitives with live neural tensors calibrated to subjective duration{' '}
-              <span
-                onMouseEnter={() => setActiveNode('Hand')}
-                onMouseLeave={() => setActiveNode(null)}
-                className="callout-highlight text-[#F59E0B] font-mono-code text-xs px-1.5 py-0.5 rounded border border-[#27272A]"
-              >
-                [Vector Maps & Durée]
-              </span>.
+              When that origin is built on flattened images rather than human neurobiology, the entire computational tree produces spatial hallucination.
             </p>
-            <p className="text-xs font-mono-code text-[#A1A1AA] italic">
-              * Hover over highlighted concepts to illuminate arborescent root branches & somatic cortical nodes on the interactive canvas.
+            <p className="text-[#FAFAFA] font-medium border-l-2 border-[#38BDF8] pl-3 py-1">
+              A²I acknowledges the antifragile power of network architectures, but enforces a fundamental correction: re-inserting the biological human nervous system as the non-negotiable{' '}
+              <span
+                onMouseEnter={() => setActiveNode('RootNode')}
+                onMouseLeave={() => setActiveNode(null)}
+                className="cursor-pointer border-b border-dashed border-[#F59E0B] text-[#F59E0B] font-mono-code text-xs px-1 py-0.5 rounded hover:bg-[#F59E0B]/10 transition-colors"
+              >
+                [root node of spatial intelligence]
+              </span>.
             </p>
           </div>
 
           {/* Interactive Node Callout Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
             <button
-              onMouseEnter={() => setActiveNode('Kopf')}
+              onMouseEnter={() => setActiveNode('RootNode')}
               onMouseLeave={() => setActiveNode(null)}
               className="p-3 rounded-lg border border-[#27272A] bg-[#0A0A0B] hover:border-[#38BDF8] transition-all flex flex-col space-y-1 text-left group"
             >
               <div className="flex items-center justify-between text-[#A1A1AA] group-hover:text-[#38BDF8]">
-                <GitBranch className="w-4 h-4" />
                 <span className="text-[10px] font-mono-code">NODE 01</span>
               </div>
               <span className="text-xs font-mono-code font-semibold text-[#FAFAFA] group-hover:text-[#38BDF8]">
-                Arborescent Root
+                Somatic Root
               </span>
             </button>
 
             <button
-              onMouseEnter={() => setActiveNode('Auge')}
+              onMouseEnter={() => setActiveNode('Arborescent')}
               onMouseLeave={() => setActiveNode(null)}
               className="p-3 rounded-lg border border-[#27272A] bg-[#0A0A0B] hover:border-[#F59E0B] transition-all flex flex-col space-y-1 text-left group"
             >
               <div className="flex items-center justify-between text-[#A1A1AA] group-hover:text-[#F59E0B]">
-                <Activity className="w-4 h-4" />
                 <span className="text-[10px] font-mono-code">NODE 02</span>
               </div>
               <span className="text-xs font-mono-code font-semibold text-[#FAFAFA] group-hover:text-[#F59E0B]">
-                Sensory Cortex
+                Arborescent Tree
               </span>
             </button>
 
             <button
-              onMouseEnter={() => setActiveNode('Hand')}
+              onMouseEnter={() => setActiveNode('GreyGoo')}
               onMouseLeave={() => setActiveNode(null)}
               className="p-3 rounded-lg border border-[#27272A] bg-[#0A0A0B] hover:border-[#38BDF8] transition-all flex flex-col space-y-1 text-left group"
             >
               <div className="flex items-center justify-between text-[#A1A1AA] group-hover:text-[#38BDF8]">
-                <Compass className="w-4 h-4" />
                 <span className="text-[10px] font-mono-code">NODE 03</span>
               </div>
               <span className="text-xs font-mono-code font-semibold text-[#FAFAFA] group-hover:text-[#38BDF8]">
-                Kinematic Trace
+                Grey Goo Cloud
               </span>
             </button>
 
             <button
-              onMouseEnter={() => setActiveNode('Rumpf')}
+              onMouseEnter={() => setActiveNode('Homunculus')}
               onMouseLeave={() => setActiveNode(null)}
               className="p-3 rounded-lg border border-[#27272A] bg-[#0A0A0B] hover:border-[#F59E0B] transition-all flex flex-col space-y-1 text-left group"
             >
               <div className="flex items-center justify-between text-[#A1A1AA] group-hover:text-[#F59E0B]">
-                <ShieldCheck className="w-4 h-4" />
                 <span className="text-[10px] font-mono-code">NODE 04</span>
               </div>
               <span className="text-xs font-mono-code font-semibold text-[#FAFAFA] group-hover:text-[#F59E0B]">
-                Somatic Root
+                Penfield Axis
               </span>
             </button>
           </div>
@@ -134,7 +129,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
               className="px-6 py-3 rounded-lg bg-[#FAFAFA] text-[#0A0A0B] font-mono-code font-semibold text-xs tracking-wider flex items-center space-x-2 hover:bg-[#38BDF8] transition-all shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_25px_rgba(56,189,248,0.4)]"
             >
               <span>EXPLORE 7-PART ESSAY SERIES</span>
-              <ArrowDown className="w-4 h-4 animate-bounce" />
+              <span>↓</span>
             </button>
 
             <a
@@ -149,9 +144,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
 
         </div>
 
-        {/* Right Column: Arborescent Somatic Homunculus Canvas */}
+        {/* Right Column: Arborescent Canvas Graphic with Technosomatic Logo Asset */}
         <div className="lg:col-span-5 relative">
-          <div className="relative rounded-2xl glass-panel p-2 border border-[#27272A] shadow-[0_0_50px_rgba(56,189,248,0.08)]">
+          <div className="relative rounded-2xl bg-[#0A0A0B] p-2 border border-[#27272A] shadow-[0_0_50px_rgba(56,189,248,0.08)]">
             <HomunculusCanvas activeNode={activeNode} />
           </div>
         </div>
