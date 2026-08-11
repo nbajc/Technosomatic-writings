@@ -23,13 +23,13 @@ export const ESSAY_SERIES: Essay[] = [
     id: "part-1",
     slug: "01-the-invisible-board",
     part: "PART 01",
-    title: "Technosomatic Architecture & The A²I Framework",
+    title: "The Body as the First Screen: An Invitation to Technosomatic Architecture",
     subtitle: "Re-inserting the embodied human nervous system into computational spatial intelligence.",
     readTime: "12 MIN READ",
     date: "AUGUST 2026",
     tags: ["MANIFESTO", "SPATIAL NEUROBIOLOGY", "PARALLAX VIEW", "A²I FRAMEWORK"],
     substackUrl: "https://substack.com/@natashabajc",
-    summary: "An inquiry into Technosomatic Architecture—a theoretical and computational framework at the intersection of spatial neurobiology, phenomenological philosophy, and machine intelligence.",
+    summary: "The body was our first screen—the original high-resolution interface. An inquiry into Technosomatic Architecture re-inserting the embodied human nervous system as the root node of spatial intelligence.",
     quoteCallout: "We optimized for computational bandwidth while starving biological depth. We built networks that move at the speed of light, yet leave us feeling deeply ungrounded.",
     somaticNodes: ["Kopf", "Auge", "Gesicht", "Nacken"],
     content: [
@@ -37,6 +37,7 @@ export const ESSAY_SERIES: Essay[] = [
         sectionTitle: "Architecture as an Untested Hypothesis",
         paragraphs: [
           "We have spent decades shrinking our cognitive landscape to fit inside glowing rectangles. In doing so, we treated human attention as a disembodied stream of text and visual tokens, forgetting that consciousness is anchored in a physical, spatial reality. We optimized for computational bandwidth while starving biological depth. We built networks that move at the speed of light, yet leave us feeling deeply ungrounded.",
+          "The body was our first screen—the original high-resolution, multi-sensory interface through which all spatial reality is filtered.",
           "This platform exists to challenge that trajectory. It is an inquiry into Technosomatic Architecture—a theoretical and computational framework at the intersection of spatial neurobiology, phenomenological philosophy, and machine intelligence.",
           "Architecture encodes a continuous hypothesis about the human body. Every section cut, ceiling height, and threshold is an implicit prediction: if we build it this way, bodies will feel, move, and relate in this way. Yet this hypothesis is almost never tested. Buildings are designed, occupied, and eventually demolished without returning somatic evidence to the architect. While software engineering and industrial design rely on iterative user feedback, spatial design operates in an open loop.",
           "The recent generative AI turn has exacerbated this crisis. Current image synthesis tools and diffusion models generate spatial forms out of statistical noise—sampling millions of flattened precedent images to yield an aesthetically persuasive, geometrically hallucinated 'grey goo'. They produce buildings from buildings, not buildings from bodies.",

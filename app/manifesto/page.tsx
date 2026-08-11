@@ -30,7 +30,7 @@ export default function ManifestoPage() {
           </div>
 
           <h1 className="font-serif text-4xl md:text-5xl font-light text-zinc-900 leading-tight mb-6">
-            Technosomatic Architecture & The A²I Framework
+            The Body as the First Screen: An Invitation to Technosomatic Architecture
           </h1>
 
           <p className="text-lg text-zinc-600 font-sans font-light leading-relaxed">
@@ -48,6 +48,10 @@ export default function ManifestoPage() {
           
           <p>
             We have spent decades shrinking our cognitive landscape to fit inside glowing rectangles. In doing so, we treated human attention as a disembodied stream of text and visual tokens, forgetting that consciousness is anchored in a physical, spatial reality. We optimized for computational bandwidth while starving biological depth. We built networks that move at the speed of light, yet leave us feeling deeply ungrounded.
+          </p>
+
+          <p>
+            The body was our first screen—the original high-resolution, multi-sensory interface through which all spatial reality is filtered.
           </p>
 
           <p>
