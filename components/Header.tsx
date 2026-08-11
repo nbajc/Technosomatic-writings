@@ -1,9 +1,10 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 
 interface HeaderProps {
-  onSelectSection: (sectionId: string) => void;
+  onSelectSection?: (sectionId: string) => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ onSelectSection }) => {
@@ -12,9 +13,9 @@ export const Header: React.FC<HeaderProps> = ({ onSelectSection }) => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
         {/* Left: Technosomatic Logo Asset + Title */}
-        <div 
-          onClick={() => onSelectSection('hero')}
-          className="flex items-center space-x-3 cursor-pointer group"
+        <Link 
+          href="/"
+          className="flex items-center space-x-3 group cursor-pointer"
         >
           <div className="w-8 h-8 flex items-center justify-center p-0.5">
             <img
@@ -28,29 +29,29 @@ export const Header: React.FC<HeaderProps> = ({ onSelectSection }) => {
               NATASHA BAJC / A²I
             </span>
           </div>
-        </div>
+        </Link>
 
         {/* Right: Nav Links & High-Contrast Black Subscribe Button */}
         <div className="flex items-center space-x-6">
           <nav className="hidden md:flex items-center space-x-6 text-xs font-mono-tag text-zinc-600">
-            <button
-              onClick={() => onSelectSection('manifesto')}
+            <Link
+              href="/manifesto"
               className="hover:text-black transition-colors tracking-widest hover:underline underline-offset-4"
             >
               [ MANIFESTO ]
-            </button>
-            <button
-              onClick={() => onSelectSection('essays')}
+            </Link>
+            <Link
+              href="/#essays"
               className="hover:text-black transition-colors tracking-widest hover:underline underline-offset-4"
             >
               [ FRAMEWORK / ESSAYS ]
-            </button>
-            <button
-              onClick={() => onSelectSection('about')}
+            </Link>
+            <Link
+              href="/#about"
               className="hover:text-black transition-colors tracking-widest hover:underline underline-offset-4"
             >
               [ ABOUT ]
-            </button>
+            </Link>
             <a
               href="https://substack.com/@natashabajc"
               target="_blank"

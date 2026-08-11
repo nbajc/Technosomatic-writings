@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { HomunculusCanvas } from './HomunculusCanvas';
 
 interface HeroSectionProps {
@@ -66,28 +67,28 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
             <button
               onMouseEnter={() => setActiveNode('RootNode')}
               onMouseLeave={() => setActiveNode(null)}
-              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-sm transition-colors"
+              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-xs transition-colors"
             >
               ⊙ Somatic Root
             </button>
             <button
               onMouseEnter={() => setActiveNode('Arborescent')}
               onMouseLeave={() => setActiveNode(null)}
-              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-sm transition-colors"
+              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-xs transition-colors"
             >
               ⊙ Arborescent Network
             </button>
             <button
               onMouseEnter={() => setActiveNode('GreyGoo')}
               onMouseLeave={() => setActiveNode(null)}
-              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-sm transition-colors"
+              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-xs transition-colors"
             >
               ⊙ Grey Goo Cloud
             </button>
             <button
               onMouseEnter={() => setActiveNode('Homunculus')}
               onMouseLeave={() => setActiveNode(null)}
-              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-sm transition-colors"
+              className="border border-zinc-300 hover:border-black text-xs font-mono-tag py-2 px-3 rounded-md bg-white text-zinc-900 shadow-xs transition-colors"
             >
               ⊙ Penfield Axis
             </button>
@@ -95,18 +96,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-3 pt-2">
-            <button
-              onClick={onExploreClick}
-              className="px-6 py-3 rounded-md bg-[#000000] text-[#FFFFFF] font-mono-tag font-semibold text-xs tracking-wider hover:bg-zinc-800 transition-colors shadow-sm"
+            <Link
+              href="/manifesto"
+              className="px-6 py-3 rounded-md bg-[#000000] text-[#FFFFFF] font-mono-tag font-semibold text-xs tracking-wider hover:bg-zinc-800 transition-colors shadow-sm inline-block"
             >
-              Explore 7-Part Series ↓
-            </button>
+              Read the A²I Manifesto →
+            </Link>
 
             <a
               href="https://substack.com/@natashabajc"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-md border border-zinc-300 hover:border-black text-zinc-900 font-mono-tag text-xs tracking-wider transition-colors bg-white shadow-xs"
+              className="px-6 py-3 rounded-md border border-zinc-300 hover:border-black text-zinc-900 font-mono-tag text-xs tracking-wider transition-colors bg-white shadow-xs inline-block"
             >
               Read on Substack ↗
             </a>

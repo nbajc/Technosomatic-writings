@@ -1,17 +1,18 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { ESSAY_SERIES, Essay } from '../lib/essays-data';
 
 interface EssayGridProps {
-  onSelectEssay: (essay: Essay) => void;
+  onSelectEssay?: (essay: Essay) => void;
 }
 
 export const EssayGrid: React.FC<EssayGridProps> = ({ onSelectEssay }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTag, setSelectedTag] = useState<string>('ALL');
 
-  const ALL_TAGS = ['ALL', 'Game Theory', 'Neurobiology', 'Phenomenology', 'Durée', 'BIM', 'Manifesto'];
+  const ALL_TAGS = ['ALL', 'GAME THEORY', 'NEUROBIOLOGY', 'PHENOMENOLOGY', 'DURÉE', 'BIM', 'MANIFESTO'];
 
   const filteredEssays = ESSAY_SERIES.filter((essay) => {
     const matchesSearch =
@@ -21,7 +22,7 @@ export const EssayGrid: React.FC<EssayGridProps> = ({ onSelectEssay }) => {
 
     const matchesTag =
       selectedTag === 'ALL' ||
-      essay.tags.some((tag) => tag.toLowerCase().includes(selectedTag.toLowerCase()));
+      essay.tags.some((tag) => tag.toUpperCase().includes(selectedTag.toUpperCase()));
 
     return matchesSearch && matchesTag;
   });
@@ -92,12 +93,12 @@ export const EssayGrid: React.FC<EssayGridProps> = ({ onSelectEssay }) => {
 
               {/* Title & Subtitle */}
               <div>
-                <h3 
-                  onClick={() => onSelectEssay(essay)}
-                  className="text-2xl font-serif-header font-bold text-[#09090B] group-hover:text-black transition-colors cursor-pointer leading-snug"
+                <Link 
+                  href={`/essays/${essay.slug}`}
+                  className="text-2xl font-serif-header font-bold text-[#09090B] group-hover:text-black transition-colors cursor-pointer leading-snug block"
                 >
                   {essay.title}
-                </h3>
+                </Link>
                 <p className="text-xs font-sans text-zinc-600 mt-2 font-light line-clamp-2">
                   {essay.subtitle}
                 </p>
@@ -123,12 +124,12 @@ export const EssayGrid: React.FC<EssayGridProps> = ({ onSelectEssay }) => {
 
             {/* Card Actions */}
             <div className="pt-6 mt-6 border-t border-zinc-200 flex items-center justify-between">
-              <button
-                onClick={() => onSelectEssay(essay)}
+              <Link
+                href={`/essays/${essay.slug}`}
                 className="text-xs font-mono-tag font-bold text-[#09090B] hover:underline flex items-center space-x-1"
               >
-                <span>Read On-Site →</span>
-              </button>
+                <span>READ ON-SITE →</span>
+              </Link>
 
               <a
                 href={essay.substackUrl}
