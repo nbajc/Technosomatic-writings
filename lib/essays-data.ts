@@ -30,32 +30,32 @@ export const ESSAY_SERIES: Essay[] = [
     tags: ["GAME THEORY", "NEUROBIOLOGY", "IMPERFECT INFORMATION", "SPATIAL AI"],
     substackUrl: "https://substack.com/@natashabajc",
     summary: "Architectural spatial synthesis is not a static layout optimization problem—it is a high-stakes game of imperfect information where human intentionality and biological spatial agents negotiate dynamic boundaries.",
-    quoteCallout: "Game theory distinguishes between games of perfect and imperfect information. In chess, every player has full access to the board state. Humans navigating built space play with imperfect information by default. Grounding is not a wellness practice—it is a condition of epistemological completeness.",
+    quoteCallout: "Grounding is not a wellness practice—it is a condition of epistemological completeness.",
     somaticNodes: ["Kopf", "Auge", "Gesicht", "Nacken"],
     content: [
       {
-        sectionTitle: "I. Game Theory and the Obscured Board State",
+        sectionTitle: "I. Imperfect Information as a Default Spatial Condition",
         paragraphs: [
-          "Game theory distinguishes cleanly between games of perfect information and games of imperfect information. In chess or Go, every player has instantaneous, full access to the entire board state at every turn. No information is hidden; the complete state matrix is visible.",
-          "Humans navigating built space play with imperfect information by default. When an occupant enters an architectural volume, their sensory apparatus intercepts only localized, incomplete signals—thermal gradients, acoustic reverberation decay, peripheral visual vectors, and micro-proprioceptive feedback.",
-          "Because traditional CAD and Building Information Modeling (BIM) treat spatial geometry as deterministic, disembodied primitives, they completely fail to model the non-deterministic game of spatial navigation. They assume a 'perfect information' observer that does not exist in human biology."
-        ],
-        latexFormula: "U_i(s_i, s_{-i}) = \\sum_{\\theta \\in \\Theta} P(\\theta) \\cdot u_i(s_i, s_{-i}, \\theta)"
-      },
-      {
-        sectionTitle: "II. The Fallacy of Static BIM Models",
-        paragraphs: [
-          "Building Information Modeling treats a wall as a passive physical extrusion and a corridor as a static volumetric boundary. But in human neurobiology, spatial geometry is an active, dynamic agent operating within a continuous feedback matrix.",
-          "Generative AI models that generate static 3D meshes omit this non-deterministic loop entirely. They produce spatial 'grey goo'—visually plausible geometries that possess no awareness of human head-direction cell orientation, entorhinal grid cell mapping, or somatic stress responses.",
-          "Without anchoring computational geometry into live biological feedback, generative design algorithms remain disembodied vector games played on an invisible board."
+          "Game theory distinguishes between games of perfect and imperfect information. In a game of perfect information—such as chess—every player has complete access to the state of the board at all times. Decisions are made from full situational awareness. In games of imperfect information, players act on partial data, filling systemic gaps with assumption, habit, or biological instinct.",
+          "Humans navigating built environments play a game of imperfect information as their default condition. The human body generates continuous somatic data—interoceptive signals, affective states, physiological responses—but most of it remains below conscious cognitive access. We feel that a room is wrong before we know why. We leave a building exhausted without understanding the underlying mechanism. The board exists; we simply cannot see it.",
+          "Full embodied presence is the condition in which the board becomes visible to the self. When we are somatically present, we have access to our own complete state. We are playing with full information. When we are dissociated, overwhelmed, or mediated through a screen, the board is obscured. We operate as reactive characters: scripted, responding to external triggers rather than reading the full game."
         ]
       },
       {
-        sectionTitle: "III. Epistemological Completeness via A²I",
+        sectionTitle: "II. The Navigation Analogy: Near-Field Somatics vs. Full-Board Visibility",
         paragraphs: [
-          "Grounding is not a passive wellness trope—it is a mandatory condition of epistemological completeness. Architectural Artificial Intelligence (A²I) re-anchors computational spatial intelligence back into the physical sensory homunculus.",
-          "By modeling spatial interaction as a continuous Bayesian game of imperfect information, A²I enables environments to adapt layout topologies in real-time to match occupant physiological homeostasis, thermal balance, and cognitive bandwidth.",
-          "Space ceases to be a static container for human bodies; it becomes an active, responsive prosthetic layer extending human neural capacity into the physical world."
+          "The spatial navigation analogy makes the complementary role of digital tools precise:",
+          "• The Driver (Near-Field Instrument): Holds high-resolution somatic data—proprioception, peripheral vision, haptic feedback from the steering wheel.",
+          "• The Navigation Map (Full-Board Visibility): Provides situational awareness beyond the visual field—real-time traffic conditions, global routing logic, spatial data the driver cannot compute alone.",
+          "Neither replaces the other. The map without the driver is autonomous—no body in the loop. The driver without the map has presence without range. Together, they constitute a fully informed player.",
+          "This is the foundational model for Architectural Artificial Intelligence (A²I). AI extends visibility to the full board. The body remains the irreplaceable near-field instrument. The design decision belongs to the architect who holds both."
+        ]
+      },
+      {
+        sectionTitle: "III. The Open Architectural Loop",
+        paragraphs: [
+          "In traditional architectural practice, the feedback loop remains open: buildings are designed, occupied, and demolished without ever returning live somatic or neurobiological telemetry to the architect.",
+          "A²I closes this loop by inserting the human body as the root node. By using AI as a high-resolution optical instrument—aggregating head-direction vectors and mapping transition probabilities—we expand authorial resolution to finally see the human occupant as they truly exist."
         ]
       }
     ]

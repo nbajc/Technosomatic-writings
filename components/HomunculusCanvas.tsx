@@ -32,8 +32,8 @@ export const HomunculusCanvas: React.FC<HomunculusCanvasProps> = ({
     const resize = () => {
       const parent = canvas.parentElement;
       if (parent) {
-        // Enforce strict 1:1 square dimensions to prevent oval distortion
-        const size = Math.min(parent.clientWidth, 480);
+        // Strict 1:1 square aspect ratio to prevent oval distortion
+        const size = Math.min(parent.clientWidth, 420);
         const dpr = window.devicePixelRatio || 1;
         canvas.width = size * dpr;
         canvas.height = size * dpr;
@@ -77,7 +77,7 @@ export const HomunculusCanvas: React.FC<HomunculusCanvasProps> = ({
       for (let i = 0; i < gooNumParticles; i++) {
         const px = (size * 0.15) + ((i * 37 + Math.sin(time + i) * 18) % (size * 0.7));
         const py = gooTopY + Math.sin(time * 0.6 + i * 0.3) * 20;
-        const particleRadius = (1.2 + Math.sin(time + i) * 1) * (size / 480);
+        const particleRadius = (1.2 + Math.sin(time + i) * 1) * (size / 420);
 
         ctx.beginPath();
         ctx.arc(px, py, particleRadius, 0, Math.PI * 2);
@@ -196,10 +196,10 @@ export const HomunculusCanvas: React.FC<HomunculusCanvasProps> = ({
   }, [activeNode]);
 
   return (
-    <div className="relative w-full h-auto object-contain aspect-square max-w-[480px] mx-auto block flex items-center justify-center overflow-hidden bg-white">
+    <div className="relative w-full h-auto object-contain aspect-square max-w-[420px] mx-auto block flex items-center justify-center overflow-hidden bg-white">
       <canvas
         ref={canvasRef}
-        className="w-full h-auto object-contain aspect-square max-w-[480px] mx-auto block cursor-crosshair mix-blend-multiply"
+        className="w-full h-auto object-contain aspect-square max-w-[420px] mix-blend-multiply block cursor-crosshair"
       />
     </div>
   );
