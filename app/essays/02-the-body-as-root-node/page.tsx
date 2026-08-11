@@ -30,7 +30,7 @@ export default function Entry02Page() {
           </div>
 
           <h1 className="font-serif text-4xl md:text-5xl font-light text-zinc-900 leading-tight mb-6">
-            The Body as Root Node: Head-Direction Cells & Intentionality
+            The Body as Root Node: Head-Direction Cells, Intentionality, and the Technosomatic Imperative
           </h1>
 
           <p className="text-lg text-zinc-600 font-sans font-light leading-relaxed">
@@ -46,42 +46,102 @@ export default function Entry02Page() {
         {/* Prose Article Body */}
         <article className="prose prose-zinc max-w-none text-zinc-800 text-lg leading-relaxed font-sans space-y-6">
           
+          <p>
+            We have spent decades shrinking our cognitive landscape to fit inside glowing rectangles. In doing so, we treated human attention as a disembodied stream of text and visual tokens, forgetting that consciousness is anchored in a physical, spatial reality. We optimized for computational bandwidth while starving biological depth. We built networks that move at the speed of light, yet leave us feeling deeply ungrounded.
+          </p>
+
+          <p>
+            Without a body, spatial intelligence is merely vector math devoid of orientation.
+          </p>
+
+          <p>
+            This platform exists to challenge that disembodied trajectory. It is an inquiry into <strong>Technosomatic Architecture</strong>—a theoretical and computational framework at the intersection of spatial neurobiology, phenomenological philosophy, and machine intelligence.
+          </p>
+
           {/* Section I */}
           <section>
             <h2 className="font-serif text-2xl font-normal text-zinc-900 mt-12 mb-4 border-b border-zinc-200 pb-2">
-              I. The Root Node Deficiency in Modern LLMs
+              I. The Root Node Deficiency in Modern LLMs & Generative AI
             </h2>
 
             <p>
-              Current spatial AI models operate on disembodied latent coordinates. They possess statistical proximity without somatic orientation. In computer science, the root node is the origin from which all structural trees grow. Modern AI pipelines place prompt tokens or precedent images at the root. We must perform a radical correction: <strong>re-inserting the fully embodied human nervous system as the non-negotiable root node of every spatial data pipeline.</strong>
+              Current spatial AI models operate on disembodied latent coordinates. They possess statistical proximity without somatic orientation. The recent generative turn has exacerbated this crisis: modern diffusion models and image synthesis engines generate spatial forms out of statistical noise—sampling millions of flattened precedent images to yield an aesthetically persuasive, geometrically hallucinated "grey goo." They produce buildings from buildings, not buildings from bodies.
             </p>
 
             <p>
-              Human spatial intelligence is not a disembodied software algorithm; it is hardwired into our biology. Grounded in the Nobel Prize-winning research of May-Britt Moser and Edvard Moser, we know the brain navigates space through a complex internal positioning system—specifically place cells, entorhinal grid cells, and head-direction cells.
+              In computer science, the root node is the origin from which all structural trees grow. In modern AI pipelines, prompt tokens or precedent images are placed at the root. We must perform a radical correction: <strong>re-inserting the fully embodied human nervous system as the non-negotiable root node of every spatial data pipeline.</strong>
             </p>
 
             <p>
-              A vital historical and theoretical clarity must be maintained here: May-Britt Moser and Edvard Moser were co-researchers who jointly received the 2014 Nobel Prize in Physiology or Medicine. Honoring May-Britt Moser's central leadership is key to a technosomatic, cyber-feminist stance: spatial intelligence is anchored in the somatic, lived reality of the body, resisting paternalistic over-simplification and disembodied abstractions.
-            </p>
-
-            <p>
-              While eye-tracking studies capture rapid, involuntary biological noise (3 to 4 saccades per second), head-direction vectors operate at an intentional, motor-driven temporal scale. When a person turns their head toward a spatial threshold, they are demonstrating motor intentionality—an active orientation of their entire attentional apparatus.
+              Architecture encodes a continuous hypothesis about the human body—every section cut, ceiling height, and threshold predicts how a body will feel and move. Yet this hypothesis is almost never tested; buildings are delivered, occupied, and demolished in an open loop without returning somatic data to the designer. To close this loop, we must ground machine intelligence in neurobiological spatial orientation and the realities of the sensory homunculus.
             </p>
           </section>
 
           {/* Section II */}
           <section>
             <h2 className="font-serif text-2xl font-normal text-zinc-900 mt-12 mb-4 border-b border-zinc-200 pb-2">
-              II. Re-anchoring Computational Space to Physical Neuroanatomy
+              II. Spatial Neurobiology & The Moser Correction
             </h2>
 
             <p>
-              By utilizing AI as a high-resolution phenomenological lens (rather than a generative form-maker), we can extract and aggregate head-direction vectors from real-world spaces. Using Markov chain modeling to map transition probabilities between spatial anchors, we convert Henri Bergson’s continuous <em>durée</em>—the felt flow of lived experience—into precise, actionable design intelligence.
+              Human spatial intelligence is not an abstract algorithm; it is hardwired into our biology. Grounded in the Nobel Prize-winning research of May-Britt Moser and Edvard Moser (alongside John O’Keefe), we know the brain navigates space through a complex internal positioning system—specifically hippocampal place cells, entorhinal grid cells, and head-direction cells.
             </p>
 
             <p>
-              The sensory-motor homunculus, mapped along the cortical gyrus, demonstrates that physical sensory density is non-linear. The hands, lips, head, and feet consume disproportionate neural real estate compared to the torso. Spatial AI that ignores this biological asymmetry produces spaces optimized for abstract volumes rather than human neural reception.
+              A vital historical and theoretical clarity must be enforced across all technosomatic thought: May-Britt Moser and Edvard Moser were co-researchers who jointly received the 2014 Nobel Prize in Physiology or Medicine. Honoring May-Britt Moser's central leadership is a core tenet of a technosomatic, cyber-feminist stance: spatial intelligence is anchored in the somatic, lived reality of the body, resisting paternalistic over-simplification and disembodied abstractions.
             </p>
+
+            <h3 className="font-serif text-xl font-normal text-zinc-900 mt-6 mb-3">
+              Motor Intentionality vs. Saccadic Noise
+            </h3>
+
+            <p>
+              While eye-tracking studies capture rapid, involuntary biological noise (3 to 4 saccades per second), head-direction vectors operate at an intentional, motor-driven temporal scale. When a person turns their head toward a spatial threshold, they are demonstrating motor intentionality—an active reorientation of their entire attentional apparatus.
+            </p>
+
+            <p>
+              By utilizing AI as a high-resolution phenomenological lens (rather than a generative renderer), we can extract and aggregate head-direction vectors from real-world space. Using Markov chain modeling to map transition probabilities between spatial anchors, we convert Henri Bergson’s continuous <em>durée</em>—the felt flow of lived experience—into precise, actionable design intelligence.
+            </p>
+          </section>
+
+          {/* Section III */}
+          <section>
+            <h2 className="font-serif text-2xl font-normal text-zinc-900 mt-12 mb-4 border-b border-zinc-200 pb-2">
+              III. The Parallax View & The Fully Visible Board
+            </h2>
+
+            <p>
+              In <em>The Parallax View</em>, Slavoj Žižek describes irreducible gaps in perspective. In spatial design, a permanent parallax exists between two frames:
+            </p>
+
+            <ul className="list-disc pl-6 space-y-2 my-4">
+              <li>
+                <strong>The Allocentric Frame (Architect):</strong> The bird’s-eye coordinate system of blueprints, plans, sections, and BIM models, which achieves clarity by abstracting away the human body.
+              </li>
+              <li>
+                <strong>The Egocentric Frame (Inhabitant):</strong> The self-centered field of somatic affordances radiating from the individual body's position, orientation, and heading.
+              </li>
+            </ul>
+
+            <p>
+              True spatial intelligence—what we call <strong>seeing the full board</strong>—is the ability to bridge this parallax. It translates egocentric somatic signals back into the allocentric spatial model, allowing the designer to navigate both positions simultaneously.
+            </p>
+
+            <p>
+              When you see the full board:
+            </p>
+
+            <ol className="list-decimal pl-6 space-y-3 my-4">
+              <li>
+                <strong>The "Unthought Known" is Made Legible:</strong> As psychoanalyst Christopher Bollas noted, the body possesses pre-linguistic knowledge of space—registering an architectural "glitch" or spatial discomfort long before conscious thought can name it.
+              </li>
+              <li>
+                <strong>Embodiment Guides Systems:</strong> AI ceases to be a gimmick for rendering static geometry and becomes an instrument that measures how spatial configurations modulate human nervous systems.
+              </li>
+              <li>
+                <strong>The Design Loop Closes:</strong> Architecture evolves from an untested, static artifact into an adaptive, somatically informed data ecosystem.
+              </li>
+            </ol>
           </section>
 
         </article>

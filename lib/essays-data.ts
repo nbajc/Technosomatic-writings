@@ -64,23 +64,39 @@ export const ESSAY_SERIES: Essay[] = [
     id: "part-2",
     slug: "02-the-body-as-root-node",
     part: "PART 02",
-    title: "The Body as Root Node: Head-Direction Cells & Intentionality",
+    title: "The Body as Root Node: Head-Direction Cells, Intentionality, and the Technosomatic Imperative",
     subtitle: "Grounding machine intelligence in neurobiological spatial orientation and sensory homunculi.",
     readTime: "10 MIN READ",
     date: "AUGUST 2026",
-    tags: ["NEUROBIOLOGY", "HEAD-DIRECTION CELLS", "EMBODIED COGNITION"],
+    tags: ["NEUROBIOLOGY", "HEAD-DIRECTION CELLS", "MOSER CORRECTION", "ROOT NODE"],
     substackUrl: "https://substack.com/@natashabajc",
-    summary: "Machine learning models hallucinate spatial coordinates because they lack an origin point. Re-inserting the sensory-motor homunculus as the root node re-anchors computational space to physical neuroanatomy.",
+    summary: "Without a body, spatial intelligence is merely vector math devoid of orientation. Re-inserting the sensory homunculus and May-Britt Moser's neurobiological positioning system as the root node.",
     quoteCallout: "Without a body, spatial intelligence is merely vector math devoid of orientation.",
     somaticNodes: ["Nacken", "Zehen", "Hand", "Zunge"],
     content: [
       {
-        sectionTitle: "I. The Root Node Deficiency in Modern LLMs",
+        sectionTitle: "I. The Root Node Deficiency in Modern LLMs & Generative AI",
         paragraphs: [
-          "Current spatial AI models operate on disembodied latent coordinates. They possess statistical proximity without somatic orientation. In computer science, the root node is the origin from which all structural trees grow. Modern AI pipelines place prompt tokens or precedent images at the root. We must perform a radical correction: re-inserting the fully embodied human nervous system as the non-negotiable root node of every spatial data pipeline.",
-          "Human spatial intelligence is hardwired into our biology. Grounded in the Nobel Prize-winning research of May-Britt Moser and Edvard Moser, we know the brain navigates space through a complex internal positioning system—specifically place cells, entorhinal grid cells, and head-direction cells.",
-          "A vital historical and theoretical clarity must be maintained here: May-Britt Moser and Edvard Moser were co-researchers who jointly received the 2014 Nobel Prize in Physiology or Medicine. Honoring May-Britt Moser's central leadership is key to a technosomatic, cyber-feminist stance: spatial intelligence is anchored in the somatic, lived reality of the body, resisting paternalistic over-simplification and disembodied abstractions.",
-          "While eye-tracking studies capture rapid, involuntary biological noise (3 to 4 saccades per second), head-direction vectors operate at an intentional, motor-driven temporal scale. When a person turns their head toward a spatial threshold, they are demonstrating motor intentionality—an active orientation of their entire attentional apparatus."
+          "Current spatial AI models operate on disembodied latent coordinates. They possess statistical proximity without somatic orientation. The recent generative turn has exacerbated this crisis: modern diffusion models and image synthesis engines generate spatial forms out of statistical noise—sampling millions of flattened precedent images to yield an aesthetically persuasive, geometrically hallucinated 'grey goo.' They produce buildings from buildings, not buildings from bodies.",
+          "In computer science, the root node is the origin from which all structural trees grow. In modern AI pipelines, prompt tokens or precedent images are placed at the root. We must perform a radical correction: re-inserting the fully embodied human nervous system as the non-negotiable root node of every spatial data pipeline.",
+          "Architecture encodes a continuous hypothesis about the human body—every section cut, ceiling height, and threshold predicts how a body will feel and move. Yet this hypothesis is almost never tested; buildings are delivered, occupied, and demolished in an open loop without returning somatic data to the designer. To close this loop, we must ground machine intelligence in neurobiological spatial orientation and the realities of the sensory homunculus."
+        ]
+      },
+      {
+        sectionTitle: "II. Spatial Neurobiology & The Moser Correction",
+        paragraphs: [
+          "Human spatial intelligence is not an abstract algorithm; it is hardwired into our biology. Grounded in the Nobel Prize-winning research of May-Britt Moser and Edvard Moser (alongside John O’Keefe), we know the brain navigates space through a complex internal positioning system—specifically hippocampal place cells, entorhinal grid cells, and head-direction cells.",
+          "A vital historical and theoretical clarity must be enforced across all technosomatic thought: May-Britt Moser and Edvard Moser were co-researchers who jointly received the 2014 Nobel Prize in Physiology or Medicine. Honoring May-Britt Moser's central leadership is a core tenet of a technosomatic, cyber-feminist stance: spatial intelligence is anchored in the somatic, lived reality of the body, resisting paternalistic over-simplification and disembodied abstractions.",
+          "While eye-tracking studies capture rapid, involuntary biological noise (3 to 4 saccades per second), head-direction vectors operate at an intentional, motor-driven temporal scale. When a person turns their head toward a spatial threshold, they are demonstrating motor intentionality—an active reorientation of their entire attentional apparatus.",
+          "By utilizing AI as a high-resolution phenomenological lens (rather than a generative renderer), we can extract and aggregate head-direction vectors from real-world space. Using Markov chain modeling to map transition probabilities between spatial anchors, we convert Henri Bergson’s continuous durée—the felt flow of lived experience—into precise, actionable design intelligence."
+        ]
+      },
+      {
+        sectionTitle: "III. The Parallax View & The Fully Visible Board",
+        paragraphs: [
+          "In The Parallax View, Slavoj Žižek describes irreducible gaps in perspective. In spatial design, a permanent parallax exists between two frames: Allocentric Frame (Architect) and Egocentric Frame (Inhabitant).",
+          "True spatial intelligence—what we call seeing the full board—is the ability to bridge this parallax. It translates egocentric somatic signals back into the allocentric spatial model, allowing the designer to navigate both positions simultaneously.",
+          "When you see the full board: (1) The 'Unthought Known' is made legible, (2) Embodiment guides systems, and (3) The design loop closes."
         ]
       }
     ]
