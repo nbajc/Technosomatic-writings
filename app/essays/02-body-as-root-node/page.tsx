@@ -1,8 +1,6 @@
 import React from 'react';
-import { ESSAY_SERIES } from '../../../lib/essays-data';
-import { EssayDetailView } from '../../../components/EssayDetailView';
+import Entry02Page from '../02-the-body-as-root-node/page';
 
-export default function Entry02Page() {
-  const essay = ESSAY_SERIES[1];
-  return <EssayDetailView essay={essay} />;
+export default function PageAlias() {
+  return <Entry02Page />;
 }

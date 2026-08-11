@@ -23,49 +23,46 @@ export const ESSAY_SERIES: Essay[] = [
     id: "part-1",
     slug: "01-the-invisible-board",
     part: "PART 01",
-    title: "The Body as the First Screen: An Invitation to Technosomatic Architecture",
-    subtitle: "Re-inserting the embodied human nervous system into computational spatial intelligence.",
+    title: "The Invisible Board: Game Theory, Space, and Imperfect Information",
+    subtitle: "Why we navigate built space with obscured somatic situational awareness, and how A²I restores epistemological completeness.",
     readTime: "12 MIN READ",
     date: "AUGUST 2026",
-    tags: ["MANIFESTO", "SPATIAL NEUROBIOLOGY", "PARALLAX VIEW", "A²I FRAMEWORK"],
+    tags: ["GAME THEORY", "NEUROBIOLOGY", "IMPERFECT INFORMATION", "SPATIAL AI"],
     substackUrl: "https://substack.com/@natashabajc",
-    summary: "The body was our first screen—the original high-resolution interface. An inquiry into Technosomatic Architecture re-inserting the embodied human nervous system as the root node of spatial intelligence.",
-    quoteCallout: "We optimized for computational bandwidth while starving biological depth. We built networks that move at the speed of light, yet leave us feeling deeply ungrounded.",
+    summary: "Architectural spatial synthesis is not a static layout optimization problem—it is a high-stakes game of imperfect information where human intentionality and biological spatial agents negotiate dynamic boundaries.",
+    quoteCallout: "Grounding is not a wellness practice—it is a condition of epistemological completeness.",
     somaticNodes: ["Kopf", "Auge", "Gesicht", "Nacken"],
     content: [
       {
-        sectionTitle: "Architecture as an Untested Hypothesis",
+        sectionTitle: "I. Imperfect Information as a Default Spatial Condition",
         paragraphs: [
-          "We have spent decades shrinking our cognitive landscape to fit inside glowing rectangles. In doing so, we treated human attention as a disembodied stream of text and visual tokens, forgetting that consciousness is anchored in a physical, spatial reality. We optimized for computational bandwidth while starving biological depth. We built networks that move at the speed of light, yet leave us feeling deeply ungrounded.",
-          "The body was our first screen—the original high-resolution, multi-sensory interface through which all spatial reality is filtered.",
-          "This platform exists to challenge that trajectory. It is an inquiry into Technosomatic Architecture—a theoretical and computational framework at the intersection of spatial neurobiology, phenomenological philosophy, and machine intelligence.",
-          "Architecture encodes a continuous hypothesis about the human body. Every section cut, ceiling height, and threshold is an implicit prediction: if we build it this way, bodies will feel, move, and relate in this way. Yet this hypothesis is almost never tested. Buildings are designed, occupied, and eventually demolished without returning somatic evidence to the architect. While software engineering and industrial design rely on iterative user feedback, spatial design operates in an open loop.",
-          "The recent generative AI turn has exacerbated this crisis. Current image synthesis tools and diffusion models generate spatial forms out of statistical noise—sampling millions of flattened precedent images to yield an aesthetically persuasive, geometrically hallucinated 'grey goo'. They produce buildings from buildings, not buildings from bodies.",
-          "The fundamental flaw of modern computational design is a missing root node. In computer science, the root node is the origin from which all structural trees grow. Modern AI pipelines place prompt tokens or precedent images at the root. We must perform a radical correction: re-inserting the fully embodied human nervous system as the non-negotiable root node of every spatial data pipeline."
+          "Game theory distinguishes between games of perfect and imperfect information. In a game of perfect information—such as chess—every player has complete access to the state of the board at all times. Decisions are made from full situational awareness. In games of imperfect information, players act on partial data, filling systemic gaps with assumption, habit, or biological instinct.",
+          "Humans navigating built environments play a game of imperfect information as their default condition. The human body generates continuous somatic data—interoceptive signals, affective states, physiological responses—but most of it remains below conscious cognitive access. We feel that a room is wrong before we know why. We leave a building exhausted without understanding the underlying mechanism. The board exists; we simply cannot see it.",
+          "Full embodied presence is the condition in which the board becomes visible to the self. When we are somatically present, we have access to our own complete state. We are playing with full information. When we are dissociated, overwhelmed, or mediated through a screen, the board is obscured. We operate as reactive characters: scripted, responding to external triggers rather than reading the full game."
         ]
       },
       {
-        sectionTitle: "The Technosomatic Imperative & Spatial Neurobiology",
+        sectionTitle: "II. The Navigation Analogy: Near-Field Somatics vs. Full-Board Visibility",
         paragraphs: [
-          "Human spatial intelligence is not a disembodied software algorithm; it is hardwired into our biology. Grounded in the Nobel Prize-winning research of May-Britt Moser and Edvard Moser, we know the brain navigates space through a complex internal positioning system—specifically place cells, entorhinal grid cells, and head-direction cells.",
-          "A vital historical and theoretical clarity must be maintained here: May-Britt Moser and Edvard Moser were co-researchers who jointly received the 2014 Nobel Prize in Physiology or Medicine. Honoring May-Britt Moser's central leadership is key to a technosomatic, cyber-feminist stance: spatial intelligence is anchored in the somatic, lived reality of the body, resisting paternalistic over-simplification and disembodied abstractions.",
-          "While eye-tracking studies capture rapid, involuntary biological noise (3 to 4 saccades per second), head-direction vectors operate at an intentional, motor-driven temporal scale. When a person turns their head toward a spatial threshold, they are demonstrating motor intentionality—an active orientation of their entire attentional apparatus.",
-          "By utilizing AI as a high-resolution phenomenological lens (rather than a generative form-maker), we can extract and aggregate head-direction vectors from real-world spaces. Using Markov chain modeling to map transition probabilities between spatial anchors, we convert Henri Bergson’s continuous durée—the felt flow of lived experience—into precise, actionable design intelligence."
+          "The spatial navigation analogy makes the complementary role of digital tools precise:",
+          "• The Driver (Near-Field Instrument): Holds high-resolution somatic data—proprioception, peripheral vision, haptic feedback from the steering wheel.",
+          "• The Navigation Map (Full-Board Visibility): Provides situational awareness beyond the visual field—real-time traffic conditions, global routing logic, spatial data the driver cannot compute alone.",
+          "Neither replaces the other. The map without the driver is autonomous—no body in the loop. The driver without the map has presence without range. Together, they constitute a fully informed player.",
+          "This is the foundational model for Architectural Artificial Intelligence (A²I). AI extends visibility to the full board. The body remains the irreplaceable near-field instrument. The design decision belongs to the architect who holds both."
         ]
       },
       {
-        sectionTitle: "The Parallax View & The Fully Visible Board",
+        sectionTitle: "III. The Open Architectural Loop",
         paragraphs: [
-          "In The Parallax View, philosopher Slavoj Žižek describes irreducible gaps in perspective. In spatial design, a permanent parallax exists between two frames: Allocentric (Architect) and Egocentric (Inhabitant).",
-          "True spatial intelligence—what we call seeing the full board—is the ability to bridge this parallax. It translates egocentric somatic signals back into the allocentric spatial model, allowing the designer to navigate both positions simultaneously.",
-          "When you see the full board: (1) The 'Unthought Known' is made legible, (2) Embodiment guides systems, and (3) The design loop closes."
+          "In traditional architectural practice, the feedback loop remains open: buildings are designed, occupied, and demolished without ever returning live somatic or neurobiological telemetry to the architect.",
+          "A²I closes this loop by inserting the human body as the root node. By using AI as a high-resolution optical instrument—aggregating head-direction vectors and mapping transition probabilities—we expand authorial resolution to finally see the human occupant as they truly exist."
         ]
       }
     ]
   },
   {
     id: "part-2",
-    slug: "02-body-as-root-node",
+    slug: "02-the-body-as-root-node",
     part: "PART 02",
     title: "The Body as Root Node: Head-Direction Cells & Intentionality",
     subtitle: "Grounding machine intelligence in neurobiological spatial orientation and sensory homunculi.",
@@ -80,7 +77,10 @@ export const ESSAY_SERIES: Essay[] = [
       {
         sectionTitle: "I. The Root Node Deficiency in Modern LLMs",
         paragraphs: [
-          "Current spatial AI models operate on disembodied latent coordinates. They possess statistical proximity without somatic orientation. In mammals, grid cells in the medial entorhinal cortex and head-direction cells in the presubiculum anchor spatial awareness directly to physical body geometry."
+          "Current spatial AI models operate on disembodied latent coordinates. They possess statistical proximity without somatic orientation. In computer science, the root node is the origin from which all structural trees grow. Modern AI pipelines place prompt tokens or precedent images at the root. We must perform a radical correction: re-inserting the fully embodied human nervous system as the non-negotiable root node of every spatial data pipeline.",
+          "Human spatial intelligence is hardwired into our biology. Grounded in the Nobel Prize-winning research of May-Britt Moser and Edvard Moser, we know the brain navigates space through a complex internal positioning system—specifically place cells, entorhinal grid cells, and head-direction cells.",
+          "A vital historical and theoretical clarity must be maintained here: May-Britt Moser and Edvard Moser were co-researchers who jointly received the 2014 Nobel Prize in Physiology or Medicine. Honoring May-Britt Moser's central leadership is key to a technosomatic, cyber-feminist stance: spatial intelligence is anchored in the somatic, lived reality of the body, resisting paternalistic over-simplification and disembodied abstractions.",
+          "While eye-tracking studies capture rapid, involuntary biological noise (3 to 4 saccades per second), head-direction vectors operate at an intentional, motor-driven temporal scale. When a person turns their head toward a spatial threshold, they are demonstrating motor intentionality—an active orientation of their entire attentional apparatus."
         ]
       }
     ]
