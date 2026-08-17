@@ -112,13 +112,50 @@ export const ESSAY_SERIES: Essay[] = [
     tags: ["PHENOMENOLOGY", "GENERATIVE AI", "TECHNOSOMATIC MANIFESTO"],
     substackUrl: "https://substack.com/@natashabajc",
     summary: "Generative AI threatens to flood built environments with homogenized 'grey goo' renders. A²I uses artificial intelligence not to generate mindless form, but as a hyper-precise lens to illuminate human somatic experience.",
-    quoteCallout: "AI must not be allowed to act as an ungrounded form-generator; it must function as a diagnostic lens for human spatial experience.",
+    quoteCallout: "AI must not be the creator of ungrounded form, but a high-resolution phenomenological lens.",
     somaticNodes: ["Auge", "Lippen", "Gesicht"],
     content: [
       {
-        sectionTitle: "I. The Generative Grey Goo Paradigm",
+        sectionTitle: "Introduction: The Epistemological Crisis",
         paragraphs: [
-          "Diffusion models and automated spatial generators produce thousands of visually plausible yet phenomenologically hollow spaces."
+          "The modern design ecosystem faces an epistemological crisis: an unprecedented overproduction of frictionless \"solutions\" that are never evaluated. Generative AI tools and diffusion models churn out infinite spatial variations in seconds, sampling flattened 2D architectural precedents to generate buildings from buildings.",
+          "The result is a self-referential, aesthetically persuasive hallucination: the \"grey goo\" of disembodied form.",
+          "The tragedy of this moment is not merely computational—it is institutional. Architecture as a discipline currently lacks an empirical method to evaluate its own hypotheses. When an industry has no mechanism to measure how a physical space modulates the human nervous system, every generative output carries the same weight. Infinite unverified forms collapse into statistical noise.",
+          "To escape this trap, we must redefine the purpose of machine intelligence: AI must not be the creator of ungrounded form, but a high-resolution phenomenological lens."
+        ]
+      },
+      {
+        sectionTitle: "I. The Overproduction of the Untested",
+        paragraphs: [
+          "Every architectural drawing is an implicit claim: if we construct this threshold, this ceiling height, this material finish, human bodies will experience regulation, connection, or focus.",
+          "Yet spatial design remains one of the few high-stakes industries operating in an entirely open loop: aerospace and software subject prototypes to continuous telemetry and iterative feedback, whereas buildings are designed, constructed, occupied, and demolished without ever returning structured somatic data to the architect's desk.",
+          "Generative AI entered this evaluation vacuum and weaponized it. By eliminating the friction of drawing, text-to-space and text-to-image models have supercharged production without introducing a single tool for assessment. We are mass-producing spatial proposals at machine scale while remaining entirely blind to their biological and cognitive impact."
+        ]
+      },
+      {
+        sectionTitle: "II. Academic Silos and the Resistance to Spatial Intelligence",
+        paragraphs: [
+          "Why does architecture lack an evaluative mechanism? Because the discipline has guarded its borders against the very fields that could provide it.",
+          "Current institutional and academic politics have historically treated architecture as an insular discourse of formal composition, semiotics, or historicist theory. Cross-pollination from cognitive neuroscience, spatial biology, and phenomenological computing has been sidelined or viewed with skepticism.",
+          "By isolating itself from the science of how living organisms navigate physical environments, architectural academia has stalled the development of true spatial intelligence—an understanding of space grounded in embodiment, sensory processing, and neurobiology.",
+          "Without cross-disciplinary grounding, computational design is left with no standard of truth other than novelty. The academic engine continues to reward formal gymnastics while the real-world consequence—the human body moving through built space—remains untracked."
+        ]
+      },
+      {
+        sectionTitle: "III. The Inversion: AI as an Optical Instrument",
+        paragraphs: [
+          "To break the cycle of the grey goo, we must invert the computational pipeline. We do not need AI to replace human intentionality in formal design; we need AI to give us vision where we are currently blind.",
+          "Grounded in N. Katherine Hayles's concept of the cognitive nonconscious, machine learning operates in the same sub-narrative, high-temporal register as our biological sensory systems. It can process patterns of human orientation that conscious reflection misses:",
+          "1. Extracting Intentional Orientation: Instead of generating speculative forms, computer vision tracks real-world head-direction vectors—the biological markers of motor intentionality.",
+          "2. Quantifying Durée: By applying Markov chain models to physical movement transitions, AI translates Henri Bergson's continuous durée (the lived flow of experience) into structured telemetry.",
+          "3. Closing the Loop in BIM: Feeding this somatic data directly back into Building Information Modeling (BIM) tools converts architectural models from static geometry into dynamic, testable hypotheses."
+        ]
+      },
+      {
+        sectionTitle: "IV. Beyond the Hallucination",
+        paragraphs: [
+          "When AI is treated as a phenomenological lens rather than a generative vending machine, the role of the architect changes. The architect is no longer an editor sorting through algorithmic scrapbooks, but a systems orchestrator designing with full-board visibility.",
+          "The antidote to the grey goo is accountability to the human nervous system. By opening architecture to spatial neurobiology and using computational tools to rigorously evaluate spatial reality, we can stop manufacturing ungrounded novelties—and begin building spaces that anchor human life."
         ]
       }
     ]
