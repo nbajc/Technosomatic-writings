@@ -47,33 +47,86 @@ export default function Entry03Page() {
         <article className="prose prose-zinc max-w-none text-zinc-800 text-lg leading-relaxed font-sans space-y-6">
           
           <p>
-            The modern design ecosystem faces an epistemological crisis: an unprecedented overproduction of frictionless "solutions" that are never evaluated. Generative AI tools and diffusion models churn out infinite spatial variations in seconds, sampling flattened 2D architectural precedents to generate <em>buildings from buildings</em>.
+            The modern design ecosystem faces an epistemological crisis: an unprecedented overproduction of frictionless "solutions" that are never evaluated. Generative AI tools and diffusion models churn out infinite spatial variations in seconds, sampling flattened 2D architectural precedents to generate buildings from buildings.
           </p>
 
           <p>
             The result is a self-referential, aesthetically persuasive hallucination: <strong>the "grey goo" of disembodied form.</strong>
           </p>
 
-          {/* DIAGRAM 1: OPEN LOOP GENERATIVE PARADIGM */}
-          <div className="my-8 p-6 rounded-lg border border-neutral-800 bg-neutral-900/50 font-mono text-xs sm:text-sm not-prose">
-            <div className="text-neutral-400 uppercase tracking-wider mb-4 font-semibold text-center flex items-center justify-center space-x-2">
-              <span className="inline-block w-2 h-2 rounded-full bg-red-500/80"></span>
-              <span>Generative Paradigm: Open Loop</span>
+          {/* DIAGRAM 1: OPEN LOOP GENERATIVE PARADIGM (Manifesto Style) */}
+          <div className="my-10 p-6 md:p-8 rounded-lg bg-zinc-50 border border-zinc-200 space-y-6 shadow-sm not-prose">
+            {/* Diagram Header */}
+            <div className="text-center space-y-1">
+              <span className="text-[10px] font-mono text-rose-600 tracking-widest uppercase font-bold">
+                ARCHITECTURAL SCHEMATIC // OPEN-LOOP FAILURE
+              </span>
+              <h4 className="text-sm font-serif font-bold text-zinc-900 uppercase tracking-wide">
+                Generative Paradigm: Open-Loop Disembodied Production
+              </h4>
             </div>
-            <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-center">
-              <div className="p-3 rounded border border-neutral-700 bg-neutral-800/80 w-full md:w-1/3">
-                <span className="block text-neutral-200 font-medium">Precedent Images</span>
-                <span className="text-neutral-400 text-xs">2D Flattened Archives</span>
+
+            {/* 3 Step Flow */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+              {/* Card 1: Precedent Images */}
+              <div className="p-4 bg-white border border-zinc-300 rounded-md space-y-1 text-left shadow-xs">
+                <div className="text-xs font-mono font-bold text-zinc-900 tracking-wider">
+                  [ PRECEDENT IMAGES ]
+                </div>
+                <div className="text-[11px] font-mono text-zinc-600 font-semibold uppercase">
+                  2D Flattened Archives
+                </div>
+                <p className="text-xs font-sans text-zinc-500 leading-relaxed">
+                  Disembodied photographic records and historical planar repositories devoid of live somatic context.
+                </p>
               </div>
-              <div className="text-neutral-500 text-lg md:rotate-0 rotate-90">→</div>
-              <div className="p-3 rounded border border-neutral-700 bg-neutral-800/80 w-full md:w-1/3">
-                <span className="block text-neutral-200 font-medium">Latent Diffusion</span>
-                <span className="text-neutral-400 text-xs">Statistical Noise Sampling</span>
+
+              {/* Card 2: Latent Diffusion */}
+              <div className="p-4 bg-white border border-zinc-300 rounded-md space-y-1 text-left shadow-xs">
+                <div className="text-xs font-mono font-bold text-zinc-900 tracking-wider">
+                  [ LATENT DIFFUSION ]
+                </div>
+                <div className="text-[11px] font-mono text-zinc-600 font-semibold uppercase">
+                  Statistical Noise Sampling
+                </div>
+                <p className="text-xs font-sans text-zinc-500 leading-relaxed">
+                  Algorithmic interpolation across ungrounded latent coordinates, generating buildings from buildings.
+                </p>
               </div>
-              <div className="text-neutral-500 text-lg md:rotate-0 rotate-90">→</div>
-              <div className="p-3 rounded border border-red-900/50 bg-red-950/20 w-full md:w-1/3">
-                <span className="block text-red-300 font-medium">The "Grey Goo"</span>
-                <span className="text-red-400/80 text-xs">Untested / Disembodied Output</span>
+
+              {/* Card 3: Frictionless Solutions */}
+              <div className="p-4 bg-white border border-zinc-300 rounded-md space-y-1 text-left shadow-xs">
+                <div className="text-xs font-mono font-bold text-zinc-900 tracking-wider">
+                  [ "SOLUTIONS" ]
+                </div>
+                <div className="text-[11px] font-mono text-zinc-600 font-semibold uppercase">
+                  Frictionless Variations
+                </div>
+                <p className="text-xs font-sans text-zinc-500 leading-relaxed">
+                  Infinite rapid spatial proposals generated with zero telemetry for biological or cognitive impact.
+                </p>
+              </div>
+            </div>
+
+            {/* Downward Vector to Grey Goo */}
+            <div className="flex flex-col items-center justify-center space-y-2 pt-2">
+              <svg className="w-6 h-6 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+
+              {/* Solid High-Contrast Box */}
+              <div className="w-full max-w-lg bg-zinc-900 text-white p-4 rounded-md font-mono text-center tracking-widest text-xs uppercase shadow-md space-y-1 border border-rose-900/60">
+                <div className="font-bold text-rose-300 text-sm tracking-wider">
+                  THE "GREY GOO"
+                </div>
+                <div className="text-[11px] text-zinc-300 font-serif italic normal-case tracking-normal">
+                  (Untested, Disembodied Hallucination Collapsing into Statistical Noise)
+                </div>
+              </div>
+
+              {/* Status Note */}
+              <div className="px-4 py-1.5 bg-white border border-zinc-300 rounded-md font-mono text-[11px] text-zinc-700 tracking-wider font-bold shadow-xs">
+                [ OPEN LOOP: ZERO SOMATIC DATA RETURNED TO THE ARCHITECT ]
               </div>
             </div>
           </div>
@@ -147,32 +200,92 @@ export default function Entry03Page() {
               To break the cycle of the grey goo, we must invert the computational pipeline. We do not need AI to replace human intentionality in formal design; we need AI to give us vision where we are currently blind.
             </p>
 
-            {/* DIAGRAM 2: CLOSED LOOP TECHNOSOMATIC PARADIGM */}
-            <div className="my-8 p-6 rounded-lg border border-neutral-800 bg-neutral-900/50 font-mono text-xs sm:text-sm not-prose">
-              <div className="text-neutral-400 uppercase tracking-wider mb-4 font-semibold text-center flex items-center justify-center space-x-2">
-                <span className="inline-block w-2 h-2 rounded-full bg-cyan-400"></span>
-                <span>Technosomatic Paradigm: Closed Loop Feedback</span>
+            {/* DIAGRAM 2: CLOSED LOOP TECHNOSOMATIC PARADIGM (Manifesto Style) */}
+            <div className="my-10 p-6 md:p-8 rounded-lg bg-zinc-50 border border-zinc-200 space-y-6 shadow-sm not-prose">
+              {/* Diagram Header */}
+              <div className="text-center space-y-1">
+                <span className="text-[10px] font-mono text-sky-600 tracking-widest uppercase font-bold">
+                  ARCHITECTURAL SCHEMATIC // CLOSED-LOOP FEEDBACK
+                </span>
+                <h4 className="text-sm font-serif font-bold text-zinc-900 uppercase tracking-wide">
+                  Technosomatic Paradigm: Closed-Loop Telemetric Feedback
+                </h4>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-                <div className="p-3 rounded border border-cyan-800/50 bg-cyan-950/20 text-center">
-                  <span className="block text-cyan-300 font-medium">Physical Inhabitant</span>
-                  <span className="text-cyan-400/80 text-xs">Embodied Biological Nervous System</span>
+
+              {/* 4-Node Closed Circuit Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Node 1: Physical Body */}
+                <div className="p-4 bg-white border border-zinc-300 rounded-md space-y-1 text-left shadow-xs">
+                  <div className="text-xs font-mono font-bold text-zinc-900 tracking-wider flex items-center justify-between">
+                    <span>[ PHYSICAL BODY ]</span>
+                    <span className="text-[10px] text-sky-600 font-semibold uppercase">ROOT NODE</span>
+                  </div>
+                  <div className="text-[11px] font-mono text-sky-700 font-semibold uppercase">
+                    Embodied Biological Nervous System
+                  </div>
+                  <p className="text-xs font-sans text-zinc-600 leading-relaxed">
+                    Interoceptive states, head-direction orientation, vestibular balance, and pre-linguistic somatic responses.
+                  </p>
                 </div>
-                <div className="p-3 rounded border border-neutral-700 bg-neutral-800/80 text-center">
-                  <span className="block text-neutral-200 font-medium">AI Phenomenological Lens</span>
-                  <span className="text-neutral-400 text-xs">Head-Direction & Motor Intentionality</span>
+
+                {/* Node 2: AI Phenomenological Lens */}
+                <div className="p-4 bg-white border border-zinc-300 rounded-md space-y-1 text-left shadow-xs">
+                  <div className="text-xs font-mono font-bold text-zinc-900 tracking-wider flex items-center justify-between">
+                    <span>[ AI PHENOMENOLOGICAL LENS ]</span>
+                    <span className="text-[10px] text-zinc-500 font-semibold uppercase">INSTRUMENT</span>
+                  </div>
+                  <div className="text-[11px] font-mono text-zinc-700 font-semibold uppercase">
+                    Head-Direction & Motor Intentionality
+                  </div>
+                  <p className="text-xs font-sans text-zinc-600 leading-relaxed">
+                    Computer vision tracking intentional orientation vectors and Markovian transition flow (durée).
+                  </p>
                 </div>
-                <div className="p-3 rounded border border-emerald-800/50 bg-emerald-950/20 text-center">
-                  <span className="block text-emerald-300 font-medium">Adaptive Architecture</span>
-                  <span className="text-emerald-400/80 text-xs">Responsive Built Environment</span>
+
+                {/* Node 4: Adaptive Architecture */}
+                <div className="p-4 bg-white border border-zinc-300 rounded-md space-y-1 text-left shadow-xs">
+                  <div className="text-xs font-mono font-bold text-zinc-900 tracking-wider flex items-center justify-between">
+                    <span>[ ADAPTIVE ARCHITECTURE ]</span>
+                    <span className="text-[10px] text-emerald-600 font-semibold uppercase">SYNTHESIS</span>
+                  </div>
+                  <div className="text-[11px] font-mono text-emerald-700 font-semibold uppercase">
+                    Evaluated Spatial Hypotheses
+                  </div>
+                  <p className="text-xs font-sans text-zinc-600 leading-relaxed">
+                    Responsive built environment, dynamic thresholds, and tuned geometry actively regulating nervous systems.
+                  </p>
                 </div>
-                <div className="p-3 rounded border border-neutral-700 bg-neutral-800/80 text-center">
-                  <span className="block text-neutral-200 font-medium">Allocentric Model (BIM)</span>
-                  <span className="text-neutral-400 text-xs">Closed-Loop Spatial Telemetry</span>
+
+                {/* Node 3: Allocentric Model (BIM) */}
+                <div className="p-4 bg-white border border-zinc-300 rounded-md space-y-1 text-left shadow-xs">
+                  <div className="text-xs font-mono font-bold text-zinc-900 tracking-wider flex items-center justify-between">
+                    <span>[ ALLOCENTRIC MODEL (BIM) ]</span>
+                    <span className="text-[10px] text-zinc-500 font-semibold uppercase">TELEMETRY</span>
+                  </div>
+                  <div className="text-[11px] font-mono text-zinc-700 font-semibold uppercase">
+                    Somatic Telemetry Integration
+                  </div>
+                  <p className="text-xs font-sans text-zinc-600 leading-relaxed">
+                    Live neural spatial graph streaming somatic data back into building models, closing the architectural loop.
+                  </p>
                 </div>
               </div>
-              <div className="mt-4 pt-3 border-t border-neutral-800 text-center text-neutral-500 text-xs">
-                Continuous bidirectional telemetry: Somatic Observation ➔ Telemetric Model ➔ Evaluated Hypotheses
+
+              {/* Center Converging Vector & Solid High-Contrast Box */}
+              <div className="flex flex-col items-center justify-center space-y-2 pt-2">
+                <div className="w-full max-w-lg bg-black text-white p-4 rounded-md font-mono text-center tracking-widest text-xs uppercase shadow-md space-y-1">
+                  <div className="font-bold text-white text-sm">
+                    A²I CLOSED-LOOP SPATIAL TELEMETRY
+                  </div>
+                  <div className="text-[11px] text-sky-400 font-serif italic normal-case tracking-normal">
+                    Physical Body ──► AI Lens ──► Somatic Telemetry / BIM ──► Adaptive Architecture ──► Physical Body
+                  </div>
+                </div>
+
+                {/* Status Node */}
+                <div className="px-4 py-1.5 bg-white border border-zinc-300 rounded-md font-mono text-[11px] text-zinc-900 tracking-wider font-bold shadow-xs">
+                  [ CLOSED-LOOP DESIGN SYSTEM: HYPOTHESES TESTED & VERIFIED ]
+                </div>
               </div>
             </div>
 
