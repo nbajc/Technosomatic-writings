@@ -4,6 +4,9 @@ import { notFound } from 'next/navigation';
 import { ESSAY_SERIES } from '../../../lib/essays-data';
 import { Header } from '../../../components/Header';
 import { InstitutionalFooter } from '../../../components/InstitutionalFooter';
+import Entry01Page from '../01-the-invisible-board/page';
+import Entry02Page from '../02-the-body-as-root-node/page';
+import Entry03Page from '../03-escaping-grey-goo/page';
 import katex from 'katex';
 
 interface EssayPageProps {
@@ -19,6 +22,18 @@ export function generateStaticParams() {
 }
 
 export default function EssayPage({ params }: EssayPageProps) {
+  if (params.slug === '01-the-invisible-board') {
+    return <Entry01Page />;
+  }
+
+  if (params.slug === '02-the-body-as-root-node' || params.slug === '02-body-as-root-node') {
+    return <Entry02Page />;
+  }
+
+  if (params.slug === '03-escaping-grey-goo') {
+    return <Entry03Page />;
+  }
+
   const essay = ESSAY_SERIES.find((e) => e.slug === params.slug);
 
   if (!essay) {
