@@ -164,20 +164,65 @@ export const ESSAY_SERIES: Essay[] = [
     id: "part-4",
     slug: "04-quantifying-duree",
     part: "PART 04",
-    title: "Quantifying Durée: Vector Maps & Markov Chains",
-    subtitle: "Translating Bergsonian duration and subjective temporal flow into computational spatial Markov models.",
-    readTime: "14 MIN READ",
+    title: "Quantifying Durée: Vector Heat Mapping, Markov Chains, and Phenomenological Data",
+    subtitle: "Bridging the gap between static architecture and lived duration (Kairos) using head-direction vectors and Markov chain spatial navigation models.",
+    readTime: "9 MIN READ",
     date: "AUGUST 2026",
-    tags: ["BERGSON", "DURÉE", "MARKOV CHAINS", "TEMPORAL ARCHITECTURE"],
+    tags: ["VECTOR HEAT MAPPING", "MARKOV CHAINS", "DURÉE", "PHENOMENOLOGY", "KAIROS"],
     substackUrl: "https://substack.com/@natashabajc",
-    summary: "Clock time measures static duration, but human spatial memory experiences Henri Bergson's 'durée'—continuous qualitative flow. We mathematically translate temporal experience into stochastic vector Markov chains.",
-    quoteCallout: "Duration is the continuous progress of the past which gnaws into the future and swells as it advances.",
-    somaticNodes: ["Handgelenk", "Schulter", "Knie"],
+    summary: "Bridging the gap between static architecture and lived duration (Kairos) using head-direction vectors and Markov chain spatial navigation models.",
+    quoteCallout: "To bridge the gap between static architecture and lived experience, we must quantify durée without flattening it into Chronos.",
+    somaticNodes: ["Handgelenk", "Schulter", "Knie", "Nacken", "Auge"],
     content: [
       {
-        sectionTitle: "I. Beyond Clock Time in Architectural CAD",
+        sectionTitle: "Introduction: Chronos vs. Kairos in Architectural Time",
         paragraphs: [
-          "Architectural tools measure distance in meters and movement in meters per second. However, human experience is governed by Bergson's duration (durée)."
+          "Different concepts of time have existed since the beginning of time—pun intended.",
+          "The ancient Greeks recognized this by dividing temporal reality into two distinct dimensions: Chronos, the sequential, quantitative tick of the clock, and Kairos, the opportune, qualitative, and deeply felt moment of transformation. In our modern rush toward efficiency, we flattened time almost exclusively into Chronos. We treated time as a series of uniform, interchangeable seconds, forgetting that human consciousness inhabits Kairos and what philosopher Henri Bergson called durée (duration)—the unbroken, qualitative flow where past sensations continuously interpenetrate the present.",
+          "Architecture has long suffered under this flattened temporal paradigm: built space is static, but the experience of space is continuous, temporal, and fluid.",
+          "For centuries, architects attempted to capture durée through poetic intuition, subjective narratives, or post-occupancy surveys. But surveys are post-rationalizations; they record what an occupant thinks they experienced after the fact, filtering somatic reality through language.",
+          "To bridge the gap between static architecture and lived experience, we must do what previously seemed impossible: quantify durée without flattening it into Chronos. Through computer vision, head-direction vector extraction, and stochastic modeling, Architectural Artificial Intelligence (A²I) turns continuous phenomenological flow into actionable spatial telemetry."
+        ]
+      },
+      {
+        sectionTitle: "I. The Saccade vs. The Heading: Extracting Intentionality",
+        paragraphs: [
+          "Most spatial analytics start and end with eye-tracking or simple foot-traffic heat maps. Both approaches fail to capture true somatic engagement:",
+          "• Eye-Tracking (Biological Noise): The human eye produces 3 to 4 saccadic movements per second. Most of this is rapid, involuntary sampling—subconscious visual scanning that reflects physiological reflexes rather than deliberate spatial orientation.",
+          "• Foot-Traffic Heat Maps (Kinematic Footprints): Tracking footsteps records where a body walks, but reveals nothing about where its attention, orientation, or emotional interest is anchored.",
+          "In contrast, head-direction vectors operate at a motor-driven, intentional scale. Turning one's head toward a threshold, an alcove, a skylight, or an artwork requires the recruitment of musculoskeletal effort. It is an act of motor intentionality—the physical alignment of the organism's primary sensory apparatus with an architectural event.",
+          "By capturing egocentric head-direction vectors via non-invasive spatial vision models, we record genuine attention without burdening occupants with wearable apparatuses."
+        ]
+      },
+      {
+        sectionTitle: "II. Markov Chains & Cognitive Landmarks: Uncovering Spatial Decision-Making",
+        paragraphs: [
+          "Once directional vectors are extracted, how do we model the qualitative flow through space?",
+          "We structure the environment as a network of phenomenological anchors (spatial attractors, thresholds, compression zones, and vistas) and treat occupant navigation as a stochastic process using Markov chains.",
+          "A first-order Markov model calculates the transition probability P(S_{t+1} | S_t)—the likelihood that an occupant oriented toward Anchor A will next transition their attention or posture toward Anchor B.",
+          "Crucially, this modeling does more than record movement: it uncovers how humans conceptualize spatial navigation.",
+          "1. Identifying Universal Internal Landmarks: Regions with intense vector convergence (high-density vector heat maps) reveal the features that the biological nervous system naturally prioritizes. These are not always what the architect intended as a centerpiece; they are the space's emergent, universal cognitive landmarks—the anchors around which inhabitants mentally map the environment.",
+          "2. Decoding Navigation Decision Trees: The transition probabilities between these landmarks expose the latent decision-making process of the human mind in space. When probabilities disperse evenly across multiple paths, the space induces cognitive friction and ambiguity; when they concentrate into clear transitional vectors, the architecture provides effortless intuitive orientation.",
+          "3. Mapping Dwell States & Friction: By computing the steady-state distribution of the Markov matrix, we discover where spatial attention naturally pools, recirculates, or prematurely drains."
+        ],
+        latexFormula: "P(S_{t+1} = j \\mid S_t = i) = T_{ij}"
+      },
+      {
+        sectionTitle: "III. Translating Egocentric Flow to Allocentric Models",
+        paragraphs: [
+          "The ultimate destination for this phenomenological telemetry is the architect's allocentric frame—the Building Information Model (BIM).",
+          "By streaming vector heat maps and transition matrices directly into BIM environments:",
+          "• The Blueprint Becomes Dynamic: Static floor plans are overlaid with live or simulated vector density gradients, illustrating not just where bodies walk, but how they perceive boundaries and openings.",
+          "• Threshold Verification: Architects can evaluate whether a compression zone (like a low-ceiling entryway) successfully heightens the psychological impact of a subsequent decompression zone (like a double-height atrium).",
+          "• The Unthought Known Becomes Legible: Sub-perceptual friction—such as hesitation at an ambiguous split corridor or disorientation in an over-illuminated atrium—is pinpointed before costly post-occupancy retrofits."
+        ]
+      },
+      {
+        sectionTitle: "IV. The Closed Loop of Experiential Design",
+        paragraphs: [
+          "Quantifying durée is not about surveillance or Taylorist optimization; it is about epistemological accountability.",
+          "When we equip the architect with the tools to observe how lived duration and Kairos unfold within built form, design ceases to be an ungrounded guess. We replace the static snapshots of the past with a dynamic understanding of human embodiment and cognitive mapping.",
+          "By measuring the flow of bodily orientation and the stochastic paths of spatial navigation, we finally give architecture the empirical language it needs to design for the full spectrum of conscious life."
         ]
       }
     ]

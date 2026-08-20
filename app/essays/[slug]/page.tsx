@@ -7,6 +7,7 @@ import { InstitutionalFooter } from '../../../components/InstitutionalFooter';
 import Entry01Page from '../01-the-invisible-board/page';
 import Entry02Page from '../02-the-body-as-root-node/page';
 import Entry03Page from '../03-escaping-grey-goo/page';
+import Entry04Page from '../04-quantifying-duree/page';
 import katex from 'katex';
 
 interface EssayPageProps {
@@ -32,6 +33,10 @@ export default function EssayPage({ params }: EssayPageProps) {
 
   if (params.slug === '03-escaping-grey-goo') {
     return <Entry03Page />;
+  }
+
+  if (params.slug === '04-quantifying-duree' || params.slug === 'quantifying-duree') {
+    return <Entry04Page />;
   }
 
   const essay = ESSAY_SERIES.find((e) => e.slug === params.slug);
